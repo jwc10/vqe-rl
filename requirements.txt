@@ -1,0 +1,5 @@
+pennylane>=0.45
+pennylane-lightning>=0.45
+numpy
+scipy
+matplotlib
