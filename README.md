@@ -13,7 +13,8 @@ pip install -r requirements.txt
 ## Run
 
 ```bash
-python h2_vqe.py
+python h2_vqe.py          # VQE baseline (compare hand-picked structures)
+python train_reinforce.py # REINFORCE + brute-force baseline
 ```
 
 Prints Hartree-Fock and optimized VQE energies; saves `results/h2_vqe_convergence.png`.

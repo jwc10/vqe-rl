@@ -1,121 +1,134 @@
 """
 Minimal H2 VQE baseline for CS224R milestone.
 
-Based on PennyLane's VQE tutorial:
-https://pennylane.ai/qml/demos/tutorial_vqe/
+RL (later) chooses excitation *structure* (actions).
+Classical VQE optimizes the continuous angles for that structure.
 
 Run:
     python h2_vqe.py
-
-Outputs:
-    - prints HF and optimized energies
-    - saves results/h2_vqe_convergence.png
 """
 
-import os
 from pathlib import Path
+
 import matplotlib.pyplot as plt
 import numpy as np
 import pennylane as qml
 from scipy.optimize import minimize
 
-# H2 molecule setup with STO-3G basis set and an equilibrium bond length of about 1.4 Bohr
+FCI_ENERGY = -1.13726250  #(STO-3G) H2 ground state energy from PennyLane
+
+
 def build_h2_hamiltonian():
-    """returns (Hamiltonian, #qubits needed, hf_state (hartree fock state)) for the H2 molecule"""
+    """Return (Hamiltonian, num_qubits, hf_state) for H2."""
     symbols = ["H", "H"]
-    # coordinates from PennyLane tutorial for H2 molecule
     coordinates = np.array([[-0.70108983, 0.0, 0.0], [0.70108983, 0.0, 0.0]])
     molecule = qml.qchem.Molecule(symbols, coordinates)
     H, num_qubits = qml.qchem.molecular_hamiltonian(molecule)
-    electrons = 2
-    hf_state = qml.qchem.hf_state(electrons, qubits)
+    hf_state = qml.qchem.hf_state(2, num_qubits)
     return H, num_qubits, hf_state
 
-def make_energy_qnodes(H, num_qubits, hf_state):
+
+# circuit created from actions - RL outputs these actions
+def excitations_from_actions(actions):
     """
-    Creates 2 circuits: hartree fock only (no variational parameters), and ansatz circuit (hartree fock with double excitation)
+    Maps actions into excitation gates. The 'stop' action is ignored.
+    Actions are dicts as seen below:
+        {"type": "single", "wires": [0, 2]}
+        {"type": "double", "wires": [0, 1, 2, 3]}
+        {"type": "stop"}
     """
+    return [a for a in actions if a.get("type") in ("single", "double")]
+
+def make_structure_qnode(H, num_qubits, hf_state, actions):
+    """
+    Builds a QNode/circuit for a given set of excitations, with one variational param for each one.
+    """
+    excitations = excitations_from_actions(actions)
     dev = qml.device("lightning.qubit", wires=num_qubits)
 
+    if not excitations:
+        @qml.qnode(dev)
+        def circuit():
+            qml.BasisState(hf_state, wires=range(num_qubits))
+            return qml.expval(H)
+        return circuit, 0
+
     @qml.qnode(dev)
-    def hf_energy():
+    def circuit(params):
         qml.BasisState(hf_state, wires=range(num_qubits))
+        for i, action in enumerate(excitations):
+            if action["type"] == "single":
+                qml.SingleExcitation(params[i], wires=action["wires"])
+            elif action["type"] == "double":
+                qml.DoubleExcitation(params[i], wires=action["wires"])
         return qml.expval(H)
-
-    @qml.qnode(dev)
-    def ansatz_energy(theta):
-        qml.BasisState(hf_state, wires=range(num_qubits))
-        # adds in electron interaction (this represents bpth electrons being excited)
-        qml.DoubleExcitation(theta, wires=[0, 1, 2, 3])
-        return qml.expval(H)
-
-    return hf_energy, ansatz_energy
+    return circuit, len(excitations)
 
 
-# ---------------------------------------------------------------------------
-# Optional: random circuits (for later RL / random-search experiments)
-# ---------------------------------------------------------------------------
-
-def random_circuit_energy(H, qubits, hf, depth, rng):
+def run_vqe_on_circuit(H, num_qubits, hf_state, actions, x0=None):
     """
-    Build and evaluate a random RX/RY/RZ/CNOT circuit on top of HF.
-
-    TODO (easy extension): call this in a loop over depths {2,4,6,8}
-    and plot depth vs energy. Swap this function in place of ansatz_energy
-    when you want random-search instead of VQE optimization.
+    The inner loop takes in a circuit with various excitations and optimizes its parameters.
+    x0 contains the initial parameters before optimization.
+    Returns a dict containing the optimized energy, optimal parameters, and optimization history.
     """
-    dev = qml.device("lightning.qubit", wires=qubits)
-    gate_pool = ["RX", "RY", "RZ", "CNOT"]
+    circuit, n_params = make_structure_qnode(H, num_qubits, hf_state, actions)
+    history = {"energy": []}
 
-    @qml.qnode(dev)
-    def circuit():
-        qml.BasisState(hf, wires=range(qubits))
-        for _ in range(depth):
-            gate = rng.choice(gate_pool)
-            if gate == "CNOT":
-                control, target = rng.choice(qubits, size=2, replace=False)
-                qml.CNOT(wires=[control, target])
-            else:
-                wire = rng.integers(qubits)
-                angle = rng.uniform(0, 2 * np.pi)
-                getattr(qml, gate)(angle, wires=wire)
-        return qml.expval(H)
+    if n_params == 0:
+        energy = np.asarray(circuit()).item()
+        history["energy"].append(energy)
+        return {
+            "energy": energy,
+            "params": np.array([]),
+            "n_params": 0,
+            "history": history,
+            "success": True,
+        }
 
-    return circuit()
+    if x0 is None:
+        x0 = np.zeros(n_params)
 
+    history["energy"].append(np.asarray(circuit(x0)).item())
 
-# ---------------------------------------------------------------------------
-# Experiment
-# ---------------------------------------------------------------------------
+    def cost(params):
+        energy = np.asarray(circuit(params)).item()
+        history["energy"].append(energy)
+        return energy
 
-def run_vqe(ansatz_energy, theta0=0.0):
-    """Minimize ansatz energy; track history for plotting."""
-    history = {
-        "theta": [theta0],
-        "energy": [np.asarray(ansatz_energy(theta0)).item()],
+    result = minimize(cost, x0=x0, method="BFGS")
+    return {
+        "energy": result.fun,
+        "params": result.x,
+        "n_params": n_params,
+        "history": history,
+        "success": result.success,
     }
 
-    def cost(theta):
-        e = np.asarray(ansatz_energy(theta[0])).item()
-        history["theta"].append(float(theta[0]))
-        history["energy"].append(e)
-        return e
 
-    result = minimize(cost, x0=[theta0], method="BFGS")
-    return result, history
+def describe_actions(actions):
+    """This creates a readable description of the actions taken in order to create the circuit."""
+    excitations = excitations_from_actions(actions)
+    if not excitations:
+        return "HF only"
+    parts = []
+    for action in excitations:
+        wires = action["wires"]
+        if action["type"] == "single":
+            parts.append(f"Single({wires[0]},{wires[1]})")
+        else:
+            parts.append(f"Double({','.join(map(str, wires))})")
+    return "HF + " + " + ".join(parts)
 
-
-def plot_convergence(history, hf_e, fci_e, out_path):
-    """Energy vs optimization step."""
+# Plots VQE energy vs number of optimization steps
+def plot_convergence(history, hf_e, fci_e, title, out_path):
     steps = range(len(history["energy"]))
-
     fig, ax = plt.subplots(figsize=(7, 4))
     ax.plot(steps, history["energy"], "o-", label="VQE energy")
     ax.axhline(hf_e, color="gray", linestyle="--", label=f"HF = {hf_e:.4f} Ha")
     ax.axhline(fci_e, color="red", linestyle=":", label=f"FCI ≈ {fci_e:.4f} Ha")
     ax.set_xlabel("Optimization step")
     ax.set_ylabel("Energy (Hartree)")
-    ax.set_title("H2 VQE: HF + double excitation")
+    ax.set_title(title)
     ax.legend()
     fig.tight_layout()
     fig.savefig(out_path, dpi=150)
@@ -123,30 +136,45 @@ def plot_convergence(history, hf_e, fci_e, out_path):
 
 
 def main():
-    H, qubits, hf = build_h2_hamiltonian()
-    hf_energy, ansatz_energy = make_energy_qnodes(H, qubits, hf)
+    H, num_qubits, hf_state = build_h2_hamiltonian()
 
-    hf_e = hf_energy()
-    print(f"H2 uses {qubits} qubits (STO-3G)")
-    print(f"Hartree-Fock energy: {hf_e:.8f} Ha")
+    # example structures for h2 molecule vqe circuit to compare
+    structures = {
+        "hf_only": [],
+        "bad_single": [{"type": "single", "wires": [0, 2]}],
+        "good_double": [{"type": "double", "wires": [0, 1, 2, 3]}],
+    }
 
-    result, history = run_vqe(ansatz_energy)
-    print(f"Optimized VQE energy: {result.fun:.8f} Ha")
-    print(f"Optimal theta: {result.x[0]:.4f} rad")
+    hf_result = run_vqe_on_circuit(H, num_qubits, hf_state, [])
+    hf_e = hf_result["energy"]
 
-    # Reference from PennyLane H2 dataset (avoids extra h5py dependency)
-    fci_e = -1.13726250
-    print(f"FCI reference:        {fci_e:.8f} Ha")
+    print(f"H2 uses {num_qubits} qubits (STO-3G)")
+    print(f"Hartree-Fock energy: {hf_e:.8f} Ha\n")
+
+    best = None
+    for name, actions in structures.items():
+        result = run_vqe_on_circuit(H, num_qubits, hf_state, actions)
+        label = describe_actions(actions)
+        print(f"[{name}] {label}")
+        print(f"  optimized energy: {result['energy']:.8f} Ha")
+        print(f"  params ({result['n_params']}): {np.round(result['params'], 4).tolist()}")
+        if best is None or result["energy"] < best["energy"]:
+            best = {"name": name, "label": label, **result}
+
+    print(f"\nFCI reference: {FCI_ENERGY:.8f} Ha")
+    print(f"Best structure: [{best['name']}] {best['label']}")
 
     out_dir = Path("results")
     out_dir.mkdir(exist_ok=True)
     plot_path = out_dir / "h2_vqe_convergence.png"
-    plot_convergence(history, hf_e, fci_e, plot_path)
+    plot_convergence(
+        best["history"],
+        hf_e,
+        FCI_ENERGY,
+        f"H2 VQE: {best['label']}",
+        plot_path,
+    )
     print(f"Saved plot to {plot_path}")
-
-    # Uncomment to try one random circuit:
-    # rng = np.random.default_rng(0)
-    # print("Random circuit (depth=4):", random_circuit_energy(H, qubits, hf, depth=4, rng=rng))
 
 
 if __name__ == "__main__":
