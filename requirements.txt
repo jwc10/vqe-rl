@@ -3,3 +3,4 @@ pennylane-lightning>=0.45
 numpy
 scipy
 matplotlib
+torch>=2.0

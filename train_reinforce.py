@@ -1,9 +1,5 @@
-"""
-Barebones REINFORCE for H2 circuit-structure search.
-
-Run:
-    python train_reinforce.py
-"""
+# train_reinforce.py
+# REINFORCE with a return baseline for H2 circuit-structure search, plus a brute-force check.
 
 from __future__ import annotations
 
@@ -60,10 +56,7 @@ def run_episode(env: CircuitStructureEnv, policy: LinearSoftmaxPolicy, rng: np.r
 
 
 def brute_force_search(env: CircuitStructureEnv) -> dict:
-    """
-    Try all valid action sequences (order matters, no duplicate excitations).
-    Exact baseline for small action spaces like H2.
-    """
+    # exhaustive over action sequences, only feasible for tiny spaces like H2
     best = {"reward": -np.inf, "actions": [], "energy": np.inf, "description": ""}
 
     def search(action_history: list[dict], used_keys: set[tuple]):
@@ -97,9 +90,14 @@ def train(
     lr: float = 0.05,
     seed: int = 0,
     max_excitations: int = 4,
+    config=None,
+    lam: float = 0.0,
+    baseline: bool = True,
+    baseline_beta: float = 0.05,
+    log_every: int = 100,
 ):
     rng = np.random.default_rng(seed)
-    env = CircuitStructureEnv(max_excitations=max_excitations)
+    env = CircuitStructureEnv(config=config, max_excitations=max_excitations, lam=lam)
     policy = LinearSoftmaxPolicy(
         state_dim=env.n_excitation_actions,
         n_actions=len(env.actions),
@@ -108,18 +106,23 @@ def train(
 
     returns = []
     best = {"reward": -np.inf}
+    b = 0.0  # EMA baseline of returns, subtracted for variance reduction
 
     for ep in range(num_episodes):
         reward, trajectory, info = run_episode(env, policy, rng)
         returns.append(reward)
-        policy.update(trajectory, reward, lr)
+
+        advantage = reward - b if baseline else reward
+        policy.update(trajectory, advantage, lr)
+        if baseline:
+            b += baseline_beta * (reward - b)
 
         if reward > best["reward"]:
             best = {"reward": reward, **info}
 
-        if (ep + 1) % 100 == 0:
-            avg = np.mean(returns[-100:])
-            print(f"episode {ep + 1:4d} | avg reward (last 100): {avg:.6f} | best: {best['reward']:.6f}")
+        if log_every and (ep + 1) % log_every == 0:
+            avg = np.mean(returns[-log_every:])
+            print(f"episode {ep + 1:4d} | avg reward (last {log_every}): {avg:.6f} | best: {best['reward']:.6f}")
 
     return env, policy, returns, best
 

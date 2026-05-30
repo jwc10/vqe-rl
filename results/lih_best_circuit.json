@@ -1,0 +1,64 @@
+{
+  "molecule": "LiH(2e,5o)",
+  "num_qubits": 10,
+  "hf_energy": -7.634630428383791,
+  "fci_energy": -7.652144596798128,
+  "best_energy": -7.650986038163795,
+  "error_vs_fci": 0.0011585586343327847,
+  "num_excitations": 6,
+  "circuit": "HF + Double(0,1,8,9) + Double(0,1,2,3) + Single(0,2) + Double(0,1,4,5) + Double(0,1,6,7) + Double(0,1,2,9)",
+  "excitations": [
+    {
+      "type": "double",
+      "wires": [
+        0,
+        1,
+        8,
+        9
+      ]
+    },
+    {
+      "type": "double",
+      "wires": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "type": "single",
+      "wires": [
+        0,
+        2
+      ]
+    },
+    {
+      "type": "double",
+      "wires": [
+        0,
+        1,
+        4,
+        5
+      ]
+    },
+    {
+      "type": "double",
+      "wires": [
+        0,
+        1,
+        6,
+        7
+      ]
+    },
+    {
+      "type": "double",
+      "wires": [
+        0,
+        1,
+        2,
+        9
+      ]
+    }
+  ]
+}

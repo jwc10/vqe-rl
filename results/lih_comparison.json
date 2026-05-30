@@ -1,0 +1,38 @@
+{
+  "hf_energy": -7.634630428383791,
+  "fci_energy": -7.6521445967980775,
+  "cap": 8,
+  "methods": [
+    {
+      "method": "ADAPT",
+      "energy": -7.652142868326657,
+      "error_vs_fci": 1.7284714202148166e-06,
+      "n_excitations": 8,
+      "n_vqe_calls": 8
+    },
+    {
+      "method": "PPO",
+      "energy": -7.6509850574035205,
+      "error_vs_fci": 0.00115953939455693,
+      "n_excitations": 8,
+      "n_vqe_calls": 465
+    },
+    {
+      "method": "PPO+warmstart",
+      "energy": -7.652142868546547,
+      "error_vs_fci": 1.7282515303307378e-06,
+      "n_excitations": 8,
+      "n_vqe_calls": 1
+    },
+    {
+      "method": "random",
+      "energy": -7.651821608861623,
+      "error_vs_fci": 0.00032298793645413326,
+      "n_excitations": 8,
+      "n_vqe_calls": 465
+    }
+  ],
+  "adapt_circuit": "HF + Double(0,1,8,9) + Double(0,1,2,9) + Double(0,1,3,8) + Double(0,1,4,5) + Double(0,1,6,7) + Double(0,1,2,3) + Single(1,3) + Single(0,2)",
+  "ppo_circuit": "HF + Double(0,1,8,9) + Single(0,2) + Double(0,1,2,5) + Double(0,1,6,7) + Double(0,1,4,5) + Double(0,1,2,3) + Single(1,5) + Double(0,1,2,9)",
+  "warmstart_circuit": "HF + Double(0,1,8,9) + Double(0,1,2,9) + Double(0,1,3,8) + Double(0,1,4,5) + Double(0,1,6,7) + Double(0,1,2,3) + Single(1,3) + Single(0,2)"
+}
