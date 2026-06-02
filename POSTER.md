@@ -95,6 +95,9 @@ python quick_fair_compare.py
 | `results/lih4_simul_prune_partial.json` | LiH simul+prune **7 CNOT** result |
 | `results/fair_greedy_compare.json` | Greedy 7 CNOT baseline |
 | `results/lih4_simul_prune_seed_sweep.log` | Rerun seeds 0→9, 2→11, 42→8 |
+| **`results/poster/*.png`** | **Poster-ready bar charts, learning curves, circuits** |
+| `python make_poster_figures.py` | Regenerate poster figures |
+| `POSTER_CHECKLIST.md` | CS224R rubric alignment |
 | `results/raw_gate_*.png`, `results/reinforce_returns.png` | training curves |
 
 ---

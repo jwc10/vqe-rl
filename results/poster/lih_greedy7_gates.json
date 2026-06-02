@@ -1,0 +1,112 @@
+{
+  "records": [
+    {
+      "name": "CNOT",
+      "wires": [
+        0,
+        4
+      ],
+      "param": null
+    },
+    {
+      "name": "Hadamard",
+      "wires": [
+        5
+      ],
+      "param": null
+    },
+    {
+      "name": "Hadamard",
+      "wires": [
+        0
+      ],
+      "param": null
+    },
+    {
+      "name": "CNOT",
+      "wires": [
+        0,
+        1
+      ],
+      "param": null
+    },
+    {
+      "name": "Hadamard",
+      "wires": [
+        5
+      ],
+      "param": null
+    },
+    {
+      "name": "CNOT",
+      "wires": [
+        4,
+        1
+      ],
+      "param": null
+    },
+    {
+      "name": "CNOT",
+      "wires": [
+        4,
+        0
+      ],
+      "param": null
+    },
+    {
+      "name": "Hadamard",
+      "wires": [
+        5
+      ],
+      "param": null
+    },
+    {
+      "name": "RY",
+      "wires": [
+        1
+      ],
+      "param": 0.10005507216560006
+    },
+    {
+      "name": "CNOT",
+      "wires": [
+        0,
+        1
+      ],
+      "param": null
+    },
+    {
+      "name": "Hadamard",
+      "wires": [
+        0
+      ],
+      "param": null
+    },
+    {
+      "name": "Hadamard",
+      "wires": [
+        5
+      ],
+      "param": null
+    },
+    {
+      "name": "CNOT",
+      "wires": [
+        0,
+        4
+      ],
+      "param": null
+    },
+    {
+      "name": "CNOT",
+      "wires": [
+        4,
+        5
+      ],
+      "param": null
+    }
+  ],
+  "energy": -7.6360770162879765,
+  "cnots": 7,
+  "error_vs_fci": 0.0014677295661567058
+}

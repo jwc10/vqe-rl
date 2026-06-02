@@ -1,0 +1,37 @@
+{
+  "fci": -7.63754474585411,
+  "runs": [
+    {
+      "cnots": 28,
+      "error_vs_fci": Infinity,
+      "label": "RL_prune_ADAPT2_exact_s0",
+      "seed": 0,
+      "wins_vs_greedy": []
+    },
+    {
+      "energy": -7.636077016287977,
+      "error_vs_fci": 0.001467729566132725,
+      "err_mHa": 1.467729566132725,
+      "cnots": 13,
+      "n_gates": 27,
+      "within_chem_acc": true,
+      "within_exact": false,
+      "label": "RL_prune_ADAPT2_chem_s0",
+      "update": 1,
+      "seed": 0,
+      "wins_vs_greedy": [
+        "fewer CNOTs than greedy-ADAPT"
+      ]
+    }
+  ],
+  "greedy_baselines": {
+    "greedy_1double": {
+      "cnots": 7,
+      "err_mHa": 1.4677295664000667
+    },
+    "greedy_adapt": {
+      "cnots": 23,
+      "err_mHa": 1.4677295661433831
+    }
+  }
+}

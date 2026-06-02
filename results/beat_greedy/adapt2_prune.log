@@ -1,0 +1,78 @@
+1-double: 28 gates, 14 CNOTs
+ADAPT-2 compile: 56 gates, 28 CNOTs, err=0.1097 mHa
+[RL_prune_ADAPT2_exact_s0] upd 1/35 | best 28 CNOTs | inf mHa | exact=False
+[RL_prune_ADAPT2_exact_s0] upd 2/35 | best 28 CNOTs | inf mHa | exact=False
+[RL_prune_ADAPT2_exact_s0] upd 3/35 | best 28 CNOTs | inf mHa | exact=False
+[RL_prune_ADAPT2_exact_s0] upd 4/35 | best 28 CNOTs | inf mHa | exact=False
+[RL_prune_ADAPT2_exact_s0] upd 5/35 | best 28 CNOTs | inf mHa | exact=False
+[RL_prune_ADAPT2_exact_s0] upd 6/35 | best 28 CNOTs | inf mHa | exact=False
+[RL_prune_ADAPT2_exact_s0] upd 7/35 | best 28 CNOTs | inf mHa | exact=False
+[RL_prune_ADAPT2_exact_s0] upd 8/35 | best 28 CNOTs | inf mHa | exact=False
+[RL_prune_ADAPT2_exact_s0] upd 9/35 | best 28 CNOTs | inf mHa | exact=False
+[RL_prune_ADAPT2_exact_s0] upd 10/35 | best 28 CNOTs | inf mHa | exact=False
+[RL_prune_ADAPT2_exact_s0] upd 11/35 | best 28 CNOTs | inf mHa | exact=False
+[RL_prune_ADAPT2_exact_s0] upd 12/35 | best 28 CNOTs | inf mHa | exact=False
+[RL_prune_ADAPT2_exact_s0] upd 13/35 | best 28 CNOTs | inf mHa | exact=False
+[RL_prune_ADAPT2_exact_s0] upd 14/35 | best 28 CNOTs | inf mHa | exact=False
+[RL_prune_ADAPT2_exact_s0] upd 15/35 | best 28 CNOTs | inf mHa | exact=False
+[RL_prune_ADAPT2_exact_s0] upd 16/35 | best 28 CNOTs | inf mHa | exact=False
+[RL_prune_ADAPT2_exact_s0] upd 17/35 | best 28 CNOTs | inf mHa | exact=False
+[RL_prune_ADAPT2_exact_s0] upd 18/35 | best 28 CNOTs | inf mHa | exact=False
+[RL_prune_ADAPT2_exact_s0] upd 19/35 | best 28 CNOTs | inf mHa | exact=False
+[RL_prune_ADAPT2_exact_s0] upd 20/35 | best 28 CNOTs | inf mHa | exact=False
+[RL_prune_ADAPT2_exact_s0] upd 21/35 | best 28 CNOTs | inf mHa | exact=False
+[RL_prune_ADAPT2_exact_s0] upd 22/35 | best 28 CNOTs | inf mHa | exact=False
+[RL_prune_ADAPT2_exact_s0] upd 23/35 | best 28 CNOTs | inf mHa | exact=False
+[RL_prune_ADAPT2_exact_s0] upd 24/35 | best 28 CNOTs | inf mHa | exact=False
+[RL_prune_ADAPT2_exact_s0] upd 25/35 | best 28 CNOTs | inf mHa | exact=False
+[RL_prune_ADAPT2_exact_s0] upd 26/35 | best 28 CNOTs | inf mHa | exact=False
+[RL_prune_ADAPT2_exact_s0] upd 27/35 | best 28 CNOTs | inf mHa | exact=False
+[RL_prune_ADAPT2_exact_s0] upd 28/35 | best 28 CNOTs | inf mHa | exact=False
+[RL_prune_ADAPT2_exact_s0] upd 29/35 | best 28 CNOTs | inf mHa | exact=False
+[RL_prune_ADAPT2_exact_s0] upd 30/35 | best 28 CNOTs | inf mHa | exact=False
+[RL_prune_ADAPT2_exact_s0] upd 31/35 | best 28 CNOTs | inf mHa | exact=False
+[RL_prune_ADAPT2_exact_s0] upd 32/35 | best 28 CNOTs | inf mHa | exact=False
+[RL_prune_ADAPT2_exact_s0] upd 33/35 | best 28 CNOTs | inf mHa | exact=False
+[RL_prune_ADAPT2_exact_s0] upd 34/35 | best 28 CNOTs | inf mHa | exact=False
+[RL_prune_ADAPT2_exact_s0] upd 35/35 | best 28 CNOTs | inf mHa | exact=False
+[RL_prune_ADAPT2_chem_s0] upd 1/35 | best 13 CNOTs | 1.4677 mHa | exact=False
+[RL_prune_ADAPT2_chem_s0] upd 2/35 | best 13 CNOTs | 1.4677 mHa | exact=False
+[RL_prune_ADAPT2_chem_s0] upd 3/35 | best 13 CNOTs | 1.4677 mHa | exact=False
+[RL_prune_ADAPT2_chem_s0] upd 4/35 | best 13 CNOTs | 1.4677 mHa | exact=False
+[RL_prune_ADAPT2_chem_s0] upd 5/35 | best 13 CNOTs | 1.4677 mHa | exact=False
+[RL_prune_ADAPT2_chem_s0] upd 6/35 | best 13 CNOTs | 1.4677 mHa | exact=False
+[RL_prune_ADAPT2_chem_s0] upd 7/35 | best 13 CNOTs | 1.4677 mHa | exact=False
+[RL_prune_ADAPT2_chem_s0] upd 8/35 | best 13 CNOTs | 1.4677 mHa | exact=False
+[RL_prune_ADAPT2_chem_s0] upd 9/35 | best 13 CNOTs | 1.4677 mHa | exact=False
+[RL_prune_ADAPT2_chem_s0] upd 10/35 | best 13 CNOTs | 1.4677 mHa | exact=False
+[RL_prune_ADAPT2_chem_s0] upd 11/35 | best 13 CNOTs | 1.4677 mHa | exact=False
+[RL_prune_ADAPT2_chem_s0] upd 12/35 | best 13 CNOTs | 1.4677 mHa | exact=False
+[RL_prune_ADAPT2_chem_s0] upd 13/35 | best 13 CNOTs | 1.4677 mHa | exact=False
+[RL_prune_ADAPT2_chem_s0] upd 14/35 | best 13 CNOTs | 1.4677 mHa | exact=False
+[RL_prune_ADAPT2_chem_s0] upd 15/35 | best 13 CNOTs | 1.4677 mHa | exact=False
+[RL_prune_ADAPT2_chem_s0] upd 16/35 | best 13 CNOTs | 1.4677 mHa | exact=False
+[RL_prune_ADAPT2_chem_s0] upd 17/35 | best 13 CNOTs | 1.4677 mHa | exact=False
+[RL_prune_ADAPT2_chem_s0] upd 18/35 | best 13 CNOTs | 1.4677 mHa | exact=False
+[RL_prune_ADAPT2_chem_s0] upd 19/35 | best 13 CNOTs | 1.4677 mHa | exact=False
+[RL_prune_ADAPT2_chem_s0] upd 20/35 | best 13 CNOTs | 1.4677 mHa | exact=False
+[RL_prune_ADAPT2_chem_s0] upd 21/35 | best 13 CNOTs | 1.4677 mHa | exact=False
+[RL_prune_ADAPT2_chem_s0] upd 22/35 | best 13 CNOTs | 1.4677 mHa | exact=False
+[RL_prune_ADAPT2_chem_s0] upd 23/35 | best 13 CNOTs | 1.4677 mHa | exact=False
+[RL_prune_ADAPT2_chem_s0] upd 24/35 | best 13 CNOTs | 1.4677 mHa | exact=False
+[RL_prune_ADAPT2_chem_s0] upd 25/35 | best 13 CNOTs | 1.4677 mHa | exact=False
+[RL_prune_ADAPT2_chem_s0] upd 26/35 | best 13 CNOTs | 1.4677 mHa | exact=False
+[RL_prune_ADAPT2_chem_s0] upd 27/35 | best 13 CNOTs | 1.4677 mHa | exact=False
+[RL_prune_ADAPT2_chem_s0] upd 28/35 | best 13 CNOTs | 1.4677 mHa | exact=False
+[RL_prune_ADAPT2_chem_s0] upd 29/35 | best 13 CNOTs | 1.4677 mHa | exact=False
+[RL_prune_ADAPT2_chem_s0] upd 30/35 | best 13 CNOTs | 1.4677 mHa | exact=False
+[RL_prune_ADAPT2_chem_s0] upd 31/35 | best 13 CNOTs | 1.4677 mHa | exact=False
+[RL_prune_ADAPT2_chem_s0] upd 32/35 | best 13 CNOTs | 1.4677 mHa | exact=False
+[RL_prune_ADAPT2_chem_s0] upd 33/35 | best 13 CNOTs | 1.4677 mHa | exact=False
+[RL_prune_ADAPT2_chem_s0] upd 34/35 | best 13 CNOTs | 1.4677 mHa | exact=False
+[RL_prune_ADAPT2_chem_s0] upd 35/35 | best 13 CNOTs | 1.4677 mHa | exact=False
+*** WIN: ['fewer CNOTs than greedy-ADAPT'] {'energy': -7.636077016287977, 'error_vs_fci': 0.001467729566132725, 'err_mHa': 1.467729566132725, 'cnots': 13, 'n_gates': 27, 'within_chem_acc': True, 'within_exact': False, 'label': 'RL_prune_ADAPT2_chem_s0', 'update': 1, 'seed': 0, 'wins_vs_greedy': ['fewer CNOTs than greedy-ADAPT']}
+
+Saved results/beat_greedy/hunt_report.json
+
+1 run(s) beat greedy on some metric:
+  RL_prune_ADAPT2_chem_s0: ['fewer CNOTs than greedy-ADAPT']

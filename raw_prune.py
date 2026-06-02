@@ -78,22 +78,43 @@ def _optimized_energy(H, nq, hf, records, extra_restarts=1, maxiter=100):
 
 
 def greedy_raw_prune(H, nq, hf, records, fci, chem_acc=CHEM_ACC,
-                     extra_restarts=1, maxiter=100):
+                     extra_restarts=1, maxiter=100, verbose=False):
     records = [dict(r) for r in records]
     n_evals = 0
     changed = True
+    round_no = 0
+    if verbose:
+        print(f"  greedy start: {len(records)} gates, {count_cnots(records)} CNOTs "
+              f"(stop when err < {chem_acc:.1e} Ha)", flush=True)
     while changed and records:
         changed = False
         best_e, best = np.inf, None
+        round_no += 1
         for i in range(len(records)):
             trial = [dict(r) for r in records[:i] + records[i + 1:]]
             e = _optimized_energy(H, nq, hf, trial, extra_restarts=extra_restarts, maxiter=maxiter)
             n_evals += 1
             if e < best_e:
                 best_e, best = e, trial
-        if best is not None and (best_e - fci) < chem_acc:
+            if verbose and (i + 1) % 16 == 0:
+                print(f"    round {round_no}: tried {i + 1}/{len(records)} removals "
+                      f"({n_evals} evals)", flush=True)
+        err = best_e - fci
+        if best is not None and err < chem_acc:
             records = best
             changed = True
+            if verbose:
+                print(f"    round {round_no}: removed 1 gate -> {len(records)} gates, "
+                      f"{count_cnots(records)} CNOTs, err={err * 1e3:.4f} mHa "
+                      f"({n_evals} evals total)", flush=True)
+        elif verbose:
+            print(f"    round {round_no}: no removable gate (best err={err * 1e3:.4f} mHa, "
+                  f"need < {chem_acc * 1e3:.4f} mHa); done", flush=True)
     final_e = _optimized_energy(H, nq, hf, records, extra_restarts=extra_restarts, maxiter=maxiter)
-    return {"records": records, "energy": final_e, "error_vs_fci": final_e - fci,
-            "cnots": count_cnots(records), "n_gates": len(records), "n_evals": n_evals}
+    out = {"records": records, "energy": final_e, "error_vs_fci": final_e - fci,
+           "cnots": count_cnots(records), "n_gates": len(records), "n_evals": n_evals}
+    if verbose:
+        err = out["error_vs_fci"]
+        print(f"  greedy done: {out['cnots']} CNOTs, {out['n_gates']} gates, "
+              f"err={err * 1e3:.6f} mHa, exact={err < 1e-6}, {n_evals} evals", flush=True)
+    return out

@@ -194,8 +194,12 @@ def train_prune(config, start_records, target=1.6e-3, num_updates=80,
 
         if log_every and (upd + 1) % log_every == 0:
             err = best.get("error_vs_fci")
-            err_s = f"{err:+.2e}" if err is not None else "--"
+            if err is not None:
+                err_s = f"{err * 1e3:.4f} mHa | exact={err < 1e-6}"
+            else:
+                err_s = "--"
             print(f"update {upd+1:4d}/{num_updates} | avg removed {np.mean(removed):.1f} | "
-                  f"best {best['cnots']} CNOTs | err {err_s}", flush=True)
+                  f"best {best['cnots']} CNOTs | {err_s} | target {target:.1e} Ha",
+                  flush=True)
 
     return best

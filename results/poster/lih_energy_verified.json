@@ -1,0 +1,26 @@
+{
+  "rows": [
+    {
+      "method": "1-double (14 CNOT compile)",
+      "cnots": 14,
+      "n_gates": 1,
+      "err_mHa": 1.467729566471121,
+      "err_Ha": 0.001467729566471121
+    },
+    {
+      "method": "Greedy raw-prune from 1-double",
+      "cnots": 7,
+      "n_gates": 14,
+      "err_mHa": 1.4677295661567058,
+      "err_Ha": 0.0014677295661567058
+    },
+    {
+      "method": "Greedy raw-prune from ADAPT",
+      "cnots": 23,
+      "n_gates": 46,
+      "err_mHa": 1.4601784991281619,
+      "err_Ha": 0.0014601784991281619
+    }
+  ],
+  "note": "RL 12-CNOT run did not save final circuit; if chem-acc, expect ~1.47 mHa same as greedy 7"
+}

@@ -1,0 +1,17 @@
+{
+  "figures_generated": [
+    "circuit_h2_greedy7.png",
+    "circuit_lih_schematic.png",
+    "h2_adapt_vqe_convergence.png",
+    "h2_cnot_comparison.png",
+    "h2_simul_prune_learning.png",
+    "lih_cnot_comparison.png",
+    "lih_energy_comparison.png",
+    "lih_energy_verified.json",
+    "lih_rl_prune_learning.png",
+    "lih_simul_prune_learning.png"
+  ],
+  "energy_finding": "Greedy-7 and 1-double sit at ~1.47 mHa; not exact FCI (2.9 mHa HF gap). RL paths at chem acc are same energy band, not better than greedy-7.",
+  "rl12_note": "RL prune reached 12 CNOTs logged; never logged 7. Different gate count than greedy-7; energy likely same plateau if within chem acc.",
+  "circuit_difference": "Different removal/build order \u2192 different raw gate lists; same chem-acc energy suggests same effective quality, not a new minimum."
+}

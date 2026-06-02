@@ -1,0 +1,16 @@
+1-double: 28 gates, 14 CNOTs
+ADAPT compile: 96 gates, 46 CNOTs
+[RL_prune_ADAPT_exact_s0] upd 1/40 | best 39 CNOTs | 0.0008 mHa | exact=True
+[RL_prune_ADAPT_exact_s0] upd 2/40 | best 27 CNOTs | 0.0008 mHa | exact=True
+[RL_prune_ADAPT_exact_s0] upd 3/40 | best 25 CNOTs | 0.0008 mHa | exact=True
+[RL_prune_ADAPT_exact_s0] upd 4/40 | best 25 CNOTs | 0.0008 mHa | exact=True
+[RL_prune_ADAPT_exact_s0] upd 5/40 | best 25 CNOTs | 0.0008 mHa | exact=True
+[RL_prune_ADAPT_exact_s0] upd 6/40 | best 25 CNOTs | 0.0008 mHa | exact=True
+[RL_prune_ADAPT_exact_s0] upd 7/40 | best 25 CNOTs | 0.0008 mHa | exact=True
+[RL_prune_ADAPT_exact_s0] upd 8/40 | best 25 CNOTs | 0.0008 mHa | exact=True
+[RL_prune_ADAPT_exact_s0] upd 9/40 | best 25 CNOTs | 0.0008 mHa | exact=True
+[RL_prune_ADAPT_exact_s0] upd 10/40 | best 25 CNOTs | 0.0008 mHa | exact=True
+[RL_prune_ADAPT_exact_s0] upd 11/40 | best 25 CNOTs | 0.0008 mHa | exact=True
+[RL_prune_ADAPT_exact_s0] upd 12/40 | best 25 CNOTs | 0.0008 mHa | exact=True
+[RL_prune_ADAPT_exact_s0] upd 13/40 | best 25 CNOTs | 0.0008 mHa | exact=True
+[RL_prune_ADAPT_exact_s0] upd 14/40 | best 25 CNOTs | 0.0008 mHa | exact=True

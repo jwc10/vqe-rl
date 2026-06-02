@@ -1,0 +1,139 @@
+{
+  "records": [
+    {
+      "name": "CNOT",
+      "wires": [
+        0,
+        4
+      ],
+      "param": null
+    },
+    {
+      "name": "Hadamard",
+      "wires": [
+        5
+      ],
+      "param": null
+    },
+    {
+      "name": "Hadamard",
+      "wires": [
+        0
+      ],
+      "param": null
+    },
+    {
+      "name": "CNOT",
+      "wires": [
+        0,
+        1
+      ],
+      "param": null
+    },
+    {
+      "name": "Hadamard",
+      "wires": [
+        5
+      ],
+      "param": null
+    },
+    {
+      "name": "RY",
+      "wires": [
+        1
+      ],
+      "param": -0.02501376366188355
+    },
+    {
+      "name": "RY",
+      "wires": [
+        0
+      ],
+      "param": 0.025013763661883556
+    },
+    {
+      "name": "CNOT",
+      "wires": [
+        4,
+        1
+      ],
+      "param": null
+    },
+    {
+      "name": "CNOT",
+      "wires": [
+        4,
+        0
+      ],
+      "param": null
+    },
+    {
+      "name": "RY",
+      "wires": [
+        0
+      ],
+      "param": -0.02501376366188352
+    },
+    {
+      "name": "Hadamard",
+      "wires": [
+        5
+      ],
+      "param": null
+    },
+    {
+      "name": "RY",
+      "wires": [
+        0
+      ],
+      "param": -0.02501376366188352
+    },
+    {
+      "name": "CNOT",
+      "wires": [
+        0,
+        1
+      ],
+      "param": null
+    },
+    {
+      "name": "Hadamard",
+      "wires": [
+        0
+      ],
+      "param": null
+    },
+    {
+      "name": "Hadamard",
+      "wires": [
+        5
+      ],
+      "param": null
+    },
+    {
+      "name": "CNOT",
+      "wires": [
+        0,
+        4
+      ],
+      "param": null
+    },
+    {
+      "name": "CNOT",
+      "wires": [
+        4,
+        5
+      ],
+      "param": null
+    }
+  ],
+  "energy": -7.636077016287985,
+  "error_vs_fci": 0.0014677295660856515,
+  "err_mHa": 1.4677295660856515,
+  "cnots": 7,
+  "n_gates": 17,
+  "within_chem_acc": true,
+  "within_exact": false,
+  "label": "RL_prune_1double_chem_s0",
+  "update": 16
+}

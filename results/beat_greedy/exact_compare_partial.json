@@ -1,0 +1,46 @@
+{
+  "note": "Partial/aborted runs; greedy exact-only may supersede greedy row",
+  "rl_exact_adapt": {
+    "method": "RL_prune_from_ADAPT_compile",
+    "target_Ha": 1e-06,
+    "status": "partial",
+    "updates": "14/40",
+    "cnots": 25,
+    "err_mHa": 0.0008,
+    "within_exact": true,
+    "note": "from prune_adapt_exact.log; circuit JSON not saved yet"
+  },
+  "greedy_adapt_chem_acc": {
+    "cnots": 23,
+    "err_mHa": 1.4677295661433831,
+    "within_exact": false,
+    "source": "fair_greedy_compare.json"
+  },
+  "greedy_adapt_k_chem_only": [
+    {
+      "k": 1,
+      "final_cnots": 7,
+      "err_mHa": 1.4677
+    },
+    {
+      "k": 2,
+      "final_cnots": 13,
+      "err_mHa": 1.4677
+    },
+    {
+      "k": 3,
+      "final_cnots": 19,
+      "err_mHa": 1.4677
+    },
+    {
+      "k": 4,
+      "final_cnots": 23,
+      "err_mHa": 1.4677
+    }
+  ],
+  "aborted_or_stuck": [
+    "greedy_adapt_exact_baseline.py stuck on chem pass (no verbose)",
+    "RL_prune_1double_exact: inf error",
+    "RL_prune_ADAPT2_exact: stuck 28 CNOTs"
+  ]
+}

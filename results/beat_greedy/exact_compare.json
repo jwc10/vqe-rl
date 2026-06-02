@@ -1,0 +1,29 @@
+{
+  "molecule": "LiH(2e,4o)",
+  "fci_note": "target exact: err < 1e-6 Ha",
+  "rl_exact_adapt": {
+    "method": "RL_prune_from_ADAPT_compile",
+    "status": "partial_killed",
+    "updates": "14/40",
+    "cnots": 25,
+    "err_mHa": 0.0008,
+    "within_exact": true,
+    "source": "prune_adapt_exact.log"
+  },
+  "greedy_exact_adapt": {
+    "method": "greedy_raw_prune_from_ADAPT_compile",
+    "status": "complete",
+    "cnots": 25,
+    "n_gates": 55,
+    "err_mHa": 0.000796,
+    "within_exact": true,
+    "seconds": 1186,
+    "source": "terminals/869219.txt (python -c chem+exact)"
+  },
+  "greedy_chem_adapt": {
+    "cnots": 23,
+    "err_mHa": 1.46773,
+    "within_exact": false
+  },
+  "verdict": "TIE at 25 CNOTs exact — greedy reaches same minimum as RL; RL is not fewer CNOTs on this objective"
+}
