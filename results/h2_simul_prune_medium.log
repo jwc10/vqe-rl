@@ -1,0 +1,71 @@
+
+=== RL hybrid simul_prune (chem) [medium] on H2 | device cpu ===
+update    1/60 | avg return -1.098 | best CNOTs chem:7 exact:7 | target 1.4e-02
+update    2/60 | avg return -3.691 | best CNOTs chem:5 exact:5 | target 1.0e-04
+update    3/60 | avg return 11.367 | best CNOTs chem:4 exact:4 | target 1.0e-04
+update    4/60 | avg return 11.017 | best CNOTs chem:4 exact:4 | target 1.0e-04
+update    5/60 | avg return  6.993 | best CNOTs chem:4 exact:4 | target 1.0e-04
+update    6/60 | avg return  7.543 | best CNOTs chem:4 exact:4 | target 1.0e-04
+update    7/60 | avg return  4.383 | best CNOTs chem:4 exact:4 | target 1.0e-04
+update    8/60 | avg return  1.890 | best CNOTs chem:4 exact:4 | target 1.0e-04
+update    9/60 | avg return 11.629 | best CNOTs chem:4 exact:4 | target 1.0e-04
+update   10/60 | avg return 11.682 | best CNOTs chem:4 exact:4 | target 1.0e-04
+update   11/60 | avg return 11.918 | best CNOTs chem:4 exact:4 | target 1.0e-04
+update   12/60 | avg return  8.450 | best CNOTs chem:4 exact:4 | target 1.0e-04
+update   13/60 | avg return 10.260 | best CNOTs chem:4 exact:4 | target 1.0e-04
+update   14/60 | avg return 10.508 | best CNOTs chem:4 exact:4 | target 1.0e-04
+update   15/60 | avg return 12.733 | best CNOTs chem:4 exact:4 | target 1.0e-04
+update   16/60 | avg return 14.671 | best CNOTs chem:4 exact:4 | target 1.0e-04
+update   17/60 | avg return 16.675 | best CNOTs chem:4 exact:4 | target 1.0e-04
+update   18/60 | avg return 19.150 | best CNOTs chem:4 exact:4 | target 1.0e-04
+update   19/60 | avg return 21.419 | best CNOTs chem:4 exact:4 | target 1.0e-04
+update   20/60 | avg return 21.275 | best CNOTs chem:4 exact:4 | target 1.0e-04
+update   21/60 | avg return 23.488 | best CNOTs chem:4 exact:4 | target 1.0e-04
+update   22/60 | avg return 22.131 | best CNOTs chem:4 exact:4 | target 1.0e-04
+update   23/60 | avg return 21.625 | best CNOTs chem:4 exact:4 | target 1.0e-04
+update   24/60 | avg return 21.706 | best CNOTs chem:4 exact:4 | target 1.0e-04
+update   25/60 | avg return 21.700 | best CNOTs chem:4 exact:4 | target 1.0e-04
+update   26/60 | avg return 23.344 | best CNOTs chem:4 exact:4 | target 1.0e-04
+update   27/60 | avg return 26.919 | best CNOTs chem:4 exact:4 | target 1.0e-04
+update   28/60 | avg return 26.062 | best CNOTs chem:4 exact:4 | target 1.0e-04
+update   29/60 | avg return 25.456 | best CNOTs chem:4 exact:4 | target 1.0e-04
+update   30/60 | avg return 25.931 | best CNOTs chem:4 exact:4 | target 1.0e-04
+update   31/60 | avg return 26.725 | best CNOTs chem:4 exact:4 | target 1.0e-04
+update   32/60 | avg return 26.737 | best CNOTs chem:4 exact:4 | target 1.0e-04
+update   33/60 | avg return 26.475 | best CNOTs chem:4 exact:4 | target 1.0e-04
+update   34/60 | avg return 27.144 | best CNOTs chem:4 exact:4 | target 1.0e-04
+update   35/60 | avg return 27.269 | best CNOTs chem:4 exact:4 | target 1.0e-04
+update   36/60 | avg return 27.206 | best CNOTs chem:4 exact:4 | target 1.0e-04
+update   37/60 | avg return 27.519 | best CNOTs chem:4 exact:4 | target 1.0e-04
+update   38/60 | avg return 27.094 | best CNOTs chem:4 exact:4 | target 1.0e-04
+update   39/60 | avg return 27.156 | best CNOTs chem:4 exact:4 | target 1.0e-04
+update   40/60 | avg return 27.363 | best CNOTs chem:4 exact:4 | target 1.0e-04
+update   41/60 | avg return 27.438 | best CNOTs chem:4 exact:4 | target 1.0e-04
+update   42/60 | avg return 27.312 | best CNOTs chem:4 exact:4 | target 1.0e-04
+update   43/60 | avg return 27.244 | best CNOTs chem:4 exact:4 | target 1.0e-04
+update   44/60 | avg return 27.475 | best CNOTs chem:4 exact:4 | target 1.0e-04
+update   45/60 | avg return 27.263 | best CNOTs chem:4 exact:4 | target 1.0e-04
+update   46/60 | avg return 27.475 | best CNOTs chem:4 exact:4 | target 1.0e-04
+update   47/60 | avg return 27.450 | best CNOTs chem:4 exact:4 | target 1.0e-04
+update   48/60 | avg return 27.519 | best CNOTs chem:4 exact:4 | target 1.0e-04
+update   49/60 | avg return 27.194 | best CNOTs chem:4 exact:4 | target 1.0e-04
+update   50/60 | avg return 27.362 | best CNOTs chem:4 exact:4 | target 1.6e-03
+update   51/60 | avg return 27.356 | best CNOTs chem:4 exact:4 | target 1.6e-03
+update   52/60 | avg return 27.512 | best CNOTs chem:4 exact:4 | target 1.6e-03
+update   53/60 | avg return 27.519 | best CNOTs chem:4 exact:4 | target 1.6e-03
+update   54/60 | avg return 27.312 | best CNOTs chem:4 exact:4 | target 1.6e-03
+update   55/60 | avg return 27.431 | best CNOTs chem:4 exact:4 | target 1.6e-03
+update   56/60 | avg return 27.462 | best CNOTs chem:4 exact:4 | target 1.6e-03
+update   57/60 | avg return 27.506 | best CNOTs chem:4 exact:4 | target 1.6e-03
+update   58/60 | avg return 27.500 | best CNOTs chem:4 exact:4 | target 1.6e-03
+update   59/60 | avg return 27.512 | best CNOTs chem:4 exact:4 | target 1.6e-03
+update   60/60 | avg return 27.506 | best CNOTs chem:4 exact:4 | target 1.6e-03
+  chem: 4 CNOTs, err +1.40e-10
+  exact: 4 CNOTs, err +1.40e-10
+
+method                                CNOTs  units   err vs FCI  chem exact
+------------------------------------------------------------------------------
+RL hybrid simul_prune (chem) [medium] @ chem      4     15    +1.40e-10     Y     Y
+RL hybrid simul_prune (chem) [medium] @ exact      4     15    +1.40e-10     Y     Y
+
+Saved results/final_h2.json

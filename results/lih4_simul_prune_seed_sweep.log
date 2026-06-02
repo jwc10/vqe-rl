@@ -1,0 +1,39 @@
+=== seed 0 ===
+update    1/8 | avg return  5.000 | best CNOTs chem:-- exact:-- | target 5.0e-03
+update    2/8 | avg return  5.000 | best CNOTs chem:-- exact:-- | target 3.0e-03
+update    3/8 | avg return  5.000 | best CNOTs chem:-- exact:-- | target 3.0e-03
+update    4/8 | avg return -2.778 | best CNOTs chem:15 exact:-- | target 2.9e-03
+update    5/8 | avg return -1.942 | best CNOTs chem:10 exact:-- | target 2.9e-03
+update    6/8 | avg return -4.123 | best CNOTs chem:9 exact:-- | target 1.6e-03
+update    7/8 | avg return -3.831 | best CNOTs chem:9 exact:-- | target 1.6e-03
+update    8/8 | avg return -4.098 | best CNOTs chem:9 exact:-- | target 1.6e-03
+  chem: 9 CNOTs, err +1.47e-03
+=== seed 1 ===
+update    1/8 | avg return  3.561 | best CNOTs chem:-- exact:-- | target 5.0e-03
+update    2/8 | avg return  4.664 | best CNOTs chem:-- exact:-- | target 3.0e-03
+update    3/8 | avg return  1.885 | best CNOTs chem:-- exact:-- | target 3.0e-03
+update    4/8 | avg return  3.462 | best CNOTs chem:-- exact:-- | target 3.0e-03
+update    5/8 | avg return  1.876 | best CNOTs chem:-- exact:-- | target 3.0e-03
+update    6/8 | avg return  3.496 | best CNOTs chem:-- exact:-- | target 3.0e-03
+update    7/8 | avg return  4.713 | best CNOTs chem:-- exact:-- | target 3.0e-03
+update    8/8 | avg return  4.872 | best CNOTs chem:-- exact:-- | target 3.0e-03
+=== seed 2 ===
+update    1/8 | avg return  4.285 | best CNOTs chem:13 exact:-- | target 5.0e-03
+update    2/8 | avg return -3.114 | best CNOTs chem:13 exact:-- | target 1.6e-03
+update    3/8 | avg return -1.237 | best CNOTs chem:11 exact:-- | target 1.6e-03
+update    4/8 | avg return -5.272 | best CNOTs chem:11 exact:-- | target 1.5e-03
+update    5/8 | avg return -6.127 | best CNOTs chem:11 exact:-- | target 1.5e-03
+update    6/8 | avg return -6.068 | best CNOTs chem:11 exact:-- | target 1.5e-03
+update    7/8 | avg return -4.135 | best CNOTs chem:11 exact:-- | target 1.5e-03
+update    8/8 | avg return -1.266 | best CNOTs chem:11 exact:-- | target 1.5e-03
+  chem: 11 CNOTs, err +1.47e-03
+=== seed 42 ===
+update    1/8 | avg return  4.710 | best CNOTs chem:-- exact:-- | target 5.0e-03
+update    2/8 | avg return  3.561 | best CNOTs chem:-- exact:-- | target 3.0e-03
+update    3/8 | avg return  2.069 | best CNOTs chem:-- exact:-- | target 3.0e-03
+update    4/8 | avg return -4.691 | best CNOTs chem:-- exact:-- | target 2.9e-03
+update    5/8 | avg return -2.292 | best CNOTs chem:18 exact:-- | target 2.9e-03
+update    6/8 | avg return -1.714 | best CNOTs chem:13 exact:-- | target 1.6e-03
+update    7/8 | avg return  0.536 | best CNOTs chem:8 exact:-- | target 1.6e-03
+update    8/8 | avg return 10.278 | best CNOTs chem:8 exact:-- | target 1.6e-03
+  chem: 8 CNOTs, err +1.47e-03

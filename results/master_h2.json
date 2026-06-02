@@ -1,0 +1,38 @@
+{
+  "molecule": "H2",
+  "qubits": 4,
+  "rows": [
+    {
+      "method": "ADAPT full",
+      "cnots": 14,
+      "n_units": 1,
+      "error_vs_fci": 5.551115123125783e-15,
+      "within_chem_acc": true,
+      "within_exact": true
+    },
+    {
+      "method": "ADAPT prefix @ chem acc",
+      "cnots": 14,
+      "n_units": 1,
+      "error_vs_fci": 5.551115123125783e-15,
+      "within_chem_acc": true,
+      "within_exact": true
+    },
+    {
+      "method": "Greedy excitation prune",
+      "cnots": 14,
+      "n_units": 1,
+      "error_vs_fci": 5.551115123125783e-15,
+      "within_chem_acc": true,
+      "within_exact": true
+    },
+    {
+      "method": "Best single double @ chem",
+      "cnots": 14,
+      "n_units": 1,
+      "error_vs_fci": 5.551115123125783e-15,
+      "within_chem_acc": true,
+      "within_exact": true
+    }
+  ]
+}

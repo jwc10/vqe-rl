@@ -1,0 +1,15 @@
+{
+  "molecule": "LiH(2e,4o)",
+  "device": "cpu",
+  "rows": [
+    {
+      "method": "RL hybrid simul_prune (chem) [medium] @ chem",
+      "cnots": 8,
+      "n_units": 19,
+      "error_vs_fci": 0.0014677295660989742,
+      "within_chem_acc": true,
+      "within_exact": false,
+      "seconds": 30.274108249985147
+    }
+  ]
+}

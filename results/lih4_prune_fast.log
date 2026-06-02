@@ -1,0 +1,33 @@
+
+=== Prune [fast] on LiH(2e,4o): 96 gates, 46 CNOTs ===
+update    1/25 | avg removed 4.1 | best 36 CNOTs | err +6.83e-05
+update    2/25 | avg removed 4.0 | best 36 CNOTs | err +6.83e-05
+update    3/25 | avg removed 4.9 | best 36 CNOTs | err +6.83e-05
+update    4/25 | avg removed 5.2 | best 36 CNOTs | err +6.83e-05
+update    5/25 | avg removed 4.2 | best 36 CNOTs | err +6.83e-05
+update    6/25 | avg removed 6.0 | best 36 CNOTs | err +6.83e-05
+update    7/25 | avg removed 7.9 | best 36 CNOTs | err +6.83e-05
+update    8/25 | avg removed 7.5 | best 34 CNOTs | err +1.36e-03
+update    9/25 | avg removed 8.4 | best 34 CNOTs | err +1.36e-03
+update   10/25 | avg removed 9.1 | best 34 CNOTs | err +1.36e-03
+update   11/25 | avg removed 10.1 | best 32 CNOTs | err +1.36e-03
+update   12/25 | avg removed 10.0 | best 32 CNOTs | err +1.36e-03
+update   13/25 | avg removed 12.8 | best 32 CNOTs | err +1.36e-03
+update   14/25 | avg removed 12.2 | best 32 CNOTs | err +1.36e-03
+update   15/25 | avg removed 11.8 | best 32 CNOTs | err +1.36e-03
+update   16/25 | avg removed 12.6 | best 31 CNOTs | err +1.36e-03
+update   17/25 | avg removed 14.2 | best 30 CNOTs | err +1.36e-03
+update   18/25 | avg removed 13.8 | best 30 CNOTs | err +1.36e-03
+update   19/25 | avg removed 13.5 | best 30 CNOTs | err +1.36e-03
+update   20/25 | avg removed 14.5 | best 29 CNOTs | err +1.36e-03
+update   21/25 | avg removed 14.5 | best 29 CNOTs | err +1.36e-03
+update   22/25 | avg removed 14.9 | best 29 CNOTs | err +1.36e-03
+update   23/25 | avg removed 14.6 | best 29 CNOTs | err +1.36e-03
+update   24/25 | avg removed 15.1 | best 29 CNOTs | err +1.36e-03
+update   25/25 | avg removed 15.2 | best 29 CNOTs | err +1.36e-03
+
+method                                CNOTs  units   err vs FCI  chem exact
+------------------------------------------------------------------------------
+RL raw prune (chem)                      29     77    +1.36e-03     Y     N
+
+Saved results/final_lih_2e4o.json

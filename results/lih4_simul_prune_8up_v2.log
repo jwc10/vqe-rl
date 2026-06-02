@@ -1,0 +1,58 @@
+
+=== RL hybrid simul_prune (chem) [medium] on LiH(2e,4o) | device cpu ===
+  ep 1/6 | return   12.5 | cnots 0 | gates 0 | phase simul+prune
+  ep 2/6 | return   12.5 | cnots 0 | gates 0 | phase simul+prune
+  ep 3/6 | return   12.5 | cnots 0 | gates 0 | phase simul+prune
+  ep 4/6 | return   10.0 | cnots 1 | gates 1 | phase simul+prune
+  ep 5/6 | return   12.5 | cnots 0 | gates 0 | phase simul+prune
+  ep 6/6 | return   10.0 | cnots 1 | gates 1 | phase simul+prune
+update    1/8 | avg return 11.667 | best CNOTs chem:-- exact:-- | target 5.0e-03
+  ep 1/6 | return   10.0 | cnots 1 | gates 1 | phase simul+prune
+  ep 2/6 | return   10.1 | cnots 0 | gates 0 | phase simul+prune
+  ep 3/6 | return   10.1 | cnots 0 | gates 0 | phase simul+prune
+  ep 4/6 | return   12.5 | cnots 0 | gates 0 | phase simul+prune
+  ep 5/6 | return   12.5 | cnots 0 | gates 0 | phase simul+prune
+  ep 6/6 | return   12.5 | cnots 0 | gates 0 | phase simul+prune
+update    2/8 | avg return 11.283 | best CNOTs chem:-- exact:-- | target 3.0e-03
+  ep 1/6 | return   -7.7 | cnots 2 | gates 2 | phase simul+prune
+  ep 2/6 | return   10.1 | cnots 0 | gates 0 | phase simul+prune
+  ep 3/6 | return   12.5 | cnots 0 | gates 0 | phase simul+prune
+  ep 4/6 | return   10.1 | cnots 0 | gates 0 | phase simul+prune
+  ep 5/6 | return   12.5 | cnots 0 | gates 0 | phase simul+prune
+  ep 6/6 | return   10.1 | cnots 0 | gates 0 | phase simul+prune
+update    3/8 | avg return  7.937 | best CNOTs chem:-- exact:-- | target 3.0e-03
+  ep 1/6 | return   13.9 | cnots 9 | gates 19 | phase simul+prune
+  ep 2/6 | return   10.1 | cnots 0 | gates 0 | phase simul+prune
+  ep 3/6 | return   12.5 | cnots 0 | gates 0 | phase simul+prune
+  ep 4/6 | return   -2.8 | cnots 8 | gates 10 | phase build_failed
+  ep 5/6 | return   10.1 | cnots 0 | gates 0 | phase simul+prune
+  ep 6/6 | return   12.5 | cnots 0 | gates 0 | phase simul+prune
+update    4/8 | avg return  9.389 | best CNOTs chem:-- exact:-- | target 3.0e-03
+  ep 1/6 | return   12.5 | cnots 0 | gates 0 | phase simul+prune
+  ep 2/6 | return   12.5 | cnots 0 | gates 0 | phase simul+prune
+  ep 3/6 | return   12.5 | cnots 0 | gates 0 | phase simul+prune
+  ep 4/6 | return   12.5 | cnots 0 | gates 0 | phase simul+prune
+  ep 5/6 | return   10.1 | cnots 0 | gates 0 | phase simul+prune
+  ep 6/6 | return   12.5 | cnots 0 | gates 0 | phase simul+prune
+update    5/8 | avg return 12.100 | best CNOTs chem:-- exact:-- | target 3.0e-03
+  ep 1/6 | return   12.5 | cnots 0 | gates 0 | phase simul+prune
+  ep 2/6 | return   -5.2 | cnots 11 | gates 22 | phase simul+prune
+  ep 3/6 | return   -4.7 | cnots 9 | gates 10 | phase build_failed
+  ep 4/6 | return   12.5 | cnots 0 | gates 0 | phase simul+prune
+  ep 5/6 | return   10.1 | cnots 0 | gates 0 | phase simul+prune
+  ep 6/6 | return   10.1 | cnots 0 | gates 0 | phase simul+prune
+update    6/8 | avg return  5.881 | best CNOTs chem:-- exact:-- | target 3.0e-03
+  ep 1/6 | return   12.5 | cnots 0 | gates 0 | phase simul+prune
+  ep 2/6 | return   12.5 | cnots 0 | gates 0 | phase simul+prune
+  ep 3/6 | return   12.5 | cnots 0 | gates 0 | phase simul+prune
+  ep 4/6 | return   12.5 | cnots 0 | gates 0 | phase simul+prune
+  ep 5/6 | return   12.5 | cnots 0 | gates 0 | phase simul+prune
+  ep 6/6 | return    2.9 | cnots 9 | gates 19 | phase simul+prune
+update    7/8 | avg return 10.900 | best CNOTs chem:-- exact:-- | target 3.0e-03
+  ep 1/6 | return   12.5 | cnots 0 | gates 0 | phase simul+prune
+  ep 2/6 | return   10.1 | cnots 0 | gates 0 | phase simul+prune
+  ep 3/6 | return   12.5 | cnots 0 | gates 0 | phase simul+prune
+  ep 4/6 | return   10.1 | cnots 0 | gates 0 | phase simul+prune
+  ep 5/6 | return   12.5 | cnots 0 | gates 0 | phase simul+prune
+  ep 6/6 | return   12.5 | cnots 0 | gates 0 | phase simul+prune
+update    8/8 | avg return 11.700 | best CNOTs chem:-- exact:-- | target 3.0e-03

@@ -1,0 +1,29 @@
+
+=== RL hybrid simultaneous (chem) [fast] on LiH(2e,4o) | device cpu ===
+update    1/20 | avg return -1.159 | best CNOTs chem:-- exact:-- | target 5.0e-03
+update    2/20 | avg return -4.074 | best CNOTs chem:15 exact:-- | target 2.9e-03
+update    3/20 | avg return -5.262 | best CNOTs chem:15 exact:-- | target 1.6e-03
+update    4/20 | avg return -4.703 | best CNOTs chem:15 exact:-- | target 1.6e-03
+update    5/20 | avg return -2.780 | best CNOTs chem:14 exact:-- | target 1.6e-03
+update    6/20 | avg return  0.857 | best CNOTs chem:14 exact:-- | target 1.6e-03
+update    7/20 | avg return -5.047 | best CNOTs chem:14 exact:-- | target 1.6e-03
+update    8/20 | avg return -4.930 | best CNOTs chem:14 exact:-- | target 1.6e-03
+update    9/20 | avg return -1.917 | best CNOTs chem:14 exact:-- | target 1.6e-03
+update   10/20 | avg return -0.983 | best CNOTs chem:14 exact:-- | target 1.6e-03
+update   11/20 | avg return -0.674 | best CNOTs chem:14 exact:-- | target 1.6e-03
+update   12/20 | avg return -0.867 | best CNOTs chem:14 exact:-- | target 1.6e-03
+update   13/20 | avg return -0.577 | best CNOTs chem:14 exact:-- | target 1.6e-03
+update   14/20 | avg return  2.170 | best CNOTs chem:14 exact:-- | target 1.6e-03
+update   15/20 | avg return  1.021 | best CNOTs chem:14 exact:-- | target 1.6e-03
+update   16/20 | avg return  0.740 | best CNOTs chem:14 exact:-- | target 1.6e-03
+update   17/20 | avg return  2.365 | best CNOTs chem:14 exact:-- | target 1.6e-03
+update   18/20 | avg return  2.064 | best CNOTs chem:14 exact:-- | target 1.6e-03
+update   19/20 | avg return  0.953 | best CNOTs chem:14 exact:-- | target 1.6e-03
+update   20/20 | avg return  2.462 | best CNOTs chem:14 exact:-- | target 1.6e-03
+  chem: 14 CNOTs, err +1.47e-03
+
+method                                CNOTs  units   err vs FCI  chem exact
+------------------------------------------------------------------------------
+RL hybrid simultaneous (chem) [fast] @ chem     14      1    +1.47e-03     Y     N
+
+Saved results/final_lih_2e4o.json

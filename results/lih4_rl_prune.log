@@ -1,0 +1,5 @@
+
+=== Prune on LiH(2e,4o): 96 gates, 46 CNOTs ===
+update  15 | avg removed 16.3 | best CNOTs: 13
+update  30 | avg removed 22.0 | best CNOTs: 12
+update  45 | avg removed 32.0 | best CNOTs: 12

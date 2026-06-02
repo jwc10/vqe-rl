@@ -1,0 +1,42 @@
+{
+  "molecule": "H2",
+  "fci": -1.1372633205047162,
+  "rows": [
+    {
+      "method": "ADAPT (excitations)",
+      "cnots": 14,
+      "n_units": 1,
+      "error_vs_fci": 5.551115123125783e-15
+    },
+    {
+      "method": "ADAPT + greedy excitation prune",
+      "cnots": 14,
+      "n_units": 1,
+      "error_vs_fci": 5.551115123125783e-15
+    },
+    {
+      "method": "ADAPT compiled + greedy raw-gate prune",
+      "cnots": 7,
+      "n_units": 14,
+      "error_vs_fci": 6.661338147750939e-16
+    },
+    {
+      "method": "ADAPT compiled + RL raw-gate prune",
+      "cnots": 7,
+      "n_units": 14,
+      "error_vs_fci": 2.220446049250313e-16
+    },
+    {
+      "method": "raw-gate RL from scratch (chem acc)",
+      "cnots": 3,
+      "n_units": 5,
+      "error_vs_fci": -6.661338147750939e-16
+    },
+    {
+      "method": "raw-gate RL from scratch (exact FCI)",
+      "cnots": 3,
+      "n_units": 5,
+      "error_vs_fci": -6.661338147750939e-16
+    }
+  ]
+}

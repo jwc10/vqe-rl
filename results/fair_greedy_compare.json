@@ -1,0 +1,50 @@
+{
+  "H2": [
+    {
+      "method": "1-double excitation (no prune)",
+      "start_cnots": 14,
+      "final_cnots": 14,
+      "n_gates": 28,
+      "err_mHa": 5.551115123125783e-12
+    },
+    {
+      "method": "Greedy raw-prune FROM 1-double compile",
+      "start_cnots": 14,
+      "final_cnots": 7,
+      "n_gates": 14,
+      "err_mHa": 6.661338147750939e-13,
+      "n_evals": 315
+    },
+    {
+      "method": "Greedy raw-prune FROM ADAPT compile (reference)",
+      "start_cnots": 14,
+      "final_cnots": 7,
+      "n_gates": 14,
+      "err_mHa": 6.661338147750939e-13
+    }
+  ],
+  "LiH(2e,4o)": [
+    {
+      "method": "1-double excitation (no prune)",
+      "start_cnots": 14,
+      "final_cnots": 14,
+      "n_gates": 28,
+      "err_mHa": 1.4677295664435874
+    },
+    {
+      "method": "Greedy raw-prune FROM 1-double compile",
+      "start_cnots": 14,
+      "final_cnots": 7,
+      "n_gates": 14,
+      "err_mHa": 1.4677295664000667,
+      "n_evals": 315
+    },
+    {
+      "method": "Greedy raw-prune FROM ADAPT compile (reference)",
+      "start_cnots": 46,
+      "final_cnots": 23,
+      "n_gates": 46,
+      "err_mHa": 1.4677295661433831
+    }
+  ]
+}

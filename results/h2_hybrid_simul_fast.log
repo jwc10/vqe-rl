@@ -1,0 +1,36 @@
+
+=== RL hybrid simultaneous (chem) [fast] on H2 | device cpu ===
+update    1/25 | avg return -1.681 | best CNOTs chem:6 exact:6 | target 1.4e-02
+update    2/25 | avg return -3.397 | best CNOTs chem:6 exact:6 | target 1.6e-03
+update    3/25 | avg return -0.637 | best CNOTs chem:6 exact:6 | target 1.6e-03
+update    4/25 | avg return -3.395 | best CNOTs chem:6 exact:6 | target 1.6e-03
+update    5/25 | avg return -6.251 | best CNOTs chem:6 exact:6 | target 1.6e-03
+update    6/25 | avg return -5.152 | best CNOTs chem:6 exact:6 | target 1.6e-03
+update    7/25 | avg return -2.030 | best CNOTs chem:6 exact:6 | target 1.6e-03
+update    8/25 | avg return -2.128 | best CNOTs chem:6 exact:6 | target 1.6e-03
+update    9/25 | avg return  0.956 | best CNOTs chem:6 exact:6 | target 1.6e-03
+update   10/25 | avg return  0.661 | best CNOTs chem:6 exact:6 | target 1.6e-03
+update   11/25 | avg return -1.964 | best CNOTs chem:6 exact:6 | target 1.6e-03
+update   12/25 | avg return  1.006 | best CNOTs chem:6 exact:6 | target 1.6e-03
+update   13/25 | avg return  2.374 | best CNOTs chem:6 exact:6 | target 1.6e-03
+update   14/25 | avg return  1.035 | best CNOTs chem:6 exact:6 | target 1.6e-03
+update   15/25 | avg return  1.125 | best CNOTs chem:6 exact:6 | target 1.6e-03
+update   16/25 | avg return  2.463 | best CNOTs chem:6 exact:6 | target 1.6e-03
+update   17/25 | avg return  4.947 | best CNOTs chem:6 exact:6 | target 1.6e-03
+update   18/25 | avg return  2.505 | best CNOTs chem:6 exact:6 | target 1.6e-03
+update   19/25 | avg return  2.541 | best CNOTs chem:6 exact:6 | target 1.6e-03
+update   20/25 | avg return  4.956 | best CNOTs chem:6 exact:6 | target 1.6e-03
+update   21/25 | avg return  3.699 | best CNOTs chem:6 exact:6 | target 1.6e-03
+update   22/25 | avg return  1.312 | best CNOTs chem:6 exact:6 | target 1.6e-03
+update   23/25 | avg return  4.865 | best CNOTs chem:6 exact:6 | target 1.6e-03
+update   24/25 | avg return  1.207 | best CNOTs chem:6 exact:6 | target 1.6e-03
+update   25/25 | avg return  0.025 | best CNOTs chem:6 exact:6 | target 1.6e-03
+  chem: 6 CNOTs, err -6.66e-16
+  exact: 6 CNOTs, err -6.66e-16
+
+method                                CNOTs  units   err vs FCI  chem exact
+------------------------------------------------------------------------------
+RL hybrid simultaneous (chem) [fast] @ chem      6      5    -6.66e-16     Y     Y
+RL hybrid simultaneous (chem) [fast] @ exact      6      5    -6.66e-16     Y     Y
+
+Saved results/final_h2.json

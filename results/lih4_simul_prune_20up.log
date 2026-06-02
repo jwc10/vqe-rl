@@ -1,0 +1,269 @@
+
+=== RL hybrid simul_prune (chem) [simul_fast] on LiH(2e,4o) | device cpu ===
+  ep 1/12 | return   -6.8 | cnots 37 | gates 14 | phase build_failed
+  ep 2/12 | return   12.5 | cnots 0 | gates 0 | phase simul+prune
+  ep 3/12 | return   10.1 | cnots 0 | gates 0 | phase simul+prune
+  ep 4/12 | return   14.0 | cnots 11 | gates 20 | phase simul+prune
+  ep 5/12 | return   -4.7 | cnots 38 | gates 16 | phase build_failed
+  ep 6/12 | return   10.0 | cnots 0 | gates 1 | phase simul+prune
+  ep 7/12 | return  -10.0 | cnots 25 | gates 15 | phase build_failed
+  ep 8/12 | return   -3.2 | cnots 42 | gates 16 | phase build_failed
+  ep 9/12 | return   10.0 | cnots 1 | gates 1 | phase simul+prune
+  ep 10/12 | return   10.0 | cnots 0 | gates 1 | phase simul+prune
+  ep 11/12 | return   10.0 | cnots 0 | gates 1 | phase simul+prune
+  ep 12/12 | return   -2.8 | cnots 2 | gates 4 | phase simul+prune
+update    1/20 | avg return  4.096 | best CNOTs chem:-- exact:-- | target 5.0e-03
+  ep 1/12 | return   12.5 | cnots 0 | gates 0 | phase simul+prune
+  ep 2/12 | return    6.2 | cnots 2 | gates 4 | phase simul+prune
+  ep 3/12 | return   10.0 | cnots 1 | gates 1 | phase simul+prune
+  ep 4/12 | return   -3.5 | cnots 26 | gates 16 | phase build_failed
+  ep 5/12 | return   12.5 | cnots 0 | gates 0 | phase simul+prune
+  ep 6/12 | return   10.0 | cnots 1 | gates 1 | phase simul+prune
+  ep 7/12 | return   12.5 | cnots 0 | gates 0 | phase simul+prune
+  ep 8/12 | return    7.9 | cnots 18 | gates 33 | phase simul+prune
+  ep 9/12 | return   12.5 | cnots 0 | gates 0 | phase simul+prune
+  ep 10/12 | return   10.0 | cnots 1 | gates 1 | phase simul+prune
+  ep 11/12 | return   10.1 | cnots 0 | gates 0 | phase simul+prune
+  ep 12/12 | return   10.0 | cnots 1 | gates 1 | phase simul+prune
+update    2/20 | avg return  9.228 | best CNOTs chem:-- exact:-- | target 3.0e-03
+  ep 1/12 | return   10.0 | cnots 1 | gates 1 | phase simul+prune
+  ep 2/12 | return    4.2 | cnots 2 | gates 4 | phase simul+prune
+  ep 3/12 | return   10.0 | cnots 1 | gates 1 | phase simul+prune
+  ep 4/12 | return   12.5 | cnots 0 | gates 0 | phase simul+prune
+  ep 5/12 | return   10.1 | cnots 0 | gates 0 | phase simul+prune
+  ep 6/12 | return   12.5 | cnots 0 | gates 0 | phase simul+prune
+  ep 7/12 | return   10.1 | cnots 0 | gates 0 | phase simul+prune
+  ep 8/12 | return   10.0 | cnots 1 | gates 1 | phase simul+prune
+  ep 9/12 | return   12.5 | cnots 0 | gates 0 | phase simul+prune
+  ep 10/12 | return    8.0 | cnots 2 | gates 6 | phase simul+prune
+  ep 11/12 | return   10.0 | cnots 1 | gates 1 | phase simul+prune
+  ep 12/12 | return   12.5 | cnots 0 | gates 0 | phase simul+prune
+update    3/20 | avg return 10.200 | best CNOTs chem:-- exact:-- | target 3.0e-03
+  ep 1/12 | return   12.5 | cnots 0 | gates 0 | phase simul+prune
+  ep 2/12 | return   10.0 | cnots 0 | gates 1 | phase simul+prune
+  ep 3/12 | return   12.5 | cnots 0 | gates 0 | phase simul+prune
+  ep 4/12 | return   10.0 | cnots 0 | gates 1 | phase simul+prune
+  ep 5/12 | return   12.5 | cnots 0 | gates 0 | phase simul+prune
+  ep 6/12 | return   10.1 | cnots 0 | gates 0 | phase simul+prune
+  ep 7/12 | return   10.0 | cnots 1 | gates 1 | phase simul+prune
+  ep 8/12 | return   12.5 | cnots 0 | gates 0 | phase simul+prune
+  ep 9/12 | return   -3.0 | cnots 54 | gates 16 | phase build_failed
+  ep 10/12 | return   12.5 | cnots 0 | gates 0 | phase simul+prune
+  ep 11/12 | return   12.5 | cnots 0 | gates 0 | phase simul+prune
+  ep 12/12 | return   -2.0 | cnots 28 | gates 16 | phase build_failed
+update    4/20 | avg return  9.175 | best CNOTs chem:-- exact:-- | target 3.0e-03
+  ep 1/12 | return    3.5 | cnots 12 | gates 21 | phase simul+prune
+  ep 2/12 | return   12.5 | cnots 0 | gates 0 | phase simul+prune
+  ep 3/12 | return   -1.6 | cnots 29 | gates 16 | phase build_failed
+  ep 4/12 | return   12.5 | cnots 0 | gates 0 | phase simul+prune
+  ep 5/12 | return   -9.0 | cnots 2 | gates 6 | phase simul+prune
+  ep 6/12 | return   10.1 | cnots 0 | gates 0 | phase simul+prune
+  ep 7/12 | return   10.1 | cnots 0 | gates 0 | phase simul+prune
+  ep 8/12 | return   12.5 | cnots 0 | gates 0 | phase simul+prune
+  ep 9/12 | return   10.1 | cnots 0 | gates 0 | phase simul+prune
+  ep 10/12 | return   12.5 | cnots 0 | gates 0 | phase simul+prune
+  ep 11/12 | return   12.5 | cnots 0 | gates 0 | phase simul+prune
+  ep 12/12 | return   -2.0 | cnots 11 | gates 16 | phase build_failed
+update    5/20 | avg return  6.972 | best CNOTs chem:12 exact:-- | target 3.0e-03
+  ep 1/12 | return   -1.6 | cnots 9 | gates 16 | phase build_failed
+  ep 2/12 | return   -1.4 | cnots 29 | gates 16 | phase build_failed
+  ep 3/12 | return   13.9 | cnots 10 | gates 20 | phase simul+prune
+  ep 4/12 | return   -2.6 | cnots 25 | gates 16 | phase build_failed
+  ep 5/12 | return   -3.7 | cnots 25 | gates 16 | phase build_failed
+  ep 6/12 | return   -2.9 | cnots 27 | gates 16 | phase build_failed
+  ep 7/12 | return   -2.7 | cnots 14 | gates 16 | phase build_failed
+  ep 8/12 | return   -3.6 | cnots 38 | gates 16 | phase build_failed
+  ep 9/12 | return   -1.8 | cnots 12 | gates 16 | phase build_failed
+  ep 10/12 | return   -5.0 | cnots 27 | gates 16 | phase build_failed
+  ep 11/12 | return   -3.9 | cnots 12 | gates 16 | phase build_failed
+  ep 12/12 | return   -3.6 | cnots 40 | gates 16 | phase build_failed
+update    6/20 | avg return -1.571 | best CNOTs chem:10 exact:-- | target 1.6e-03
+  ep 1/12 | return   -1.0 | cnots 43 | gates 16 | phase build_failed
+  ep 2/12 | return   -2.3 | cnots 29 | gates 16 | phase build_failed
+  ep 3/12 | return   -2.2 | cnots 27 | gates 16 | phase build_failed
+  ep 4/12 | return   -1.4 | cnots 15 | gates 16 | phase build_failed
+  ep 5/12 | return   -3.0 | cnots 13 | gates 16 | phase build_failed
+  ep 6/12 | return   -1.3 | cnots 43 | gates 16 | phase build_failed
+  ep 7/12 | return   -0.8 | cnots 25 | gates 16 | phase build_failed
+  ep 8/12 | return   -2.1 | cnots 38 | gates 16 | phase build_failed
+  ep 9/12 | return   -3.0 | cnots 15 | gates 16 | phase build_failed
+  ep 10/12 | return   -2.1 | cnots 27 | gates 16 | phase build_failed
+  ep 11/12 | return   -1.0 | cnots 10 | gates 16 | phase build_failed
+  ep 12/12 | return   -1.6 | cnots 26 | gates 16 | phase build_failed
+update    7/20 | avg return -1.816 | best CNOTs chem:10 exact:-- | target 1.6e-03
+  ep 1/12 | return   -2.5 | cnots 43 | gates 16 | phase build_failed
+  ep 2/12 | return   -2.2 | cnots 42 | gates 16 | phase build_failed
+  ep 3/12 | return   11.5 | cnots 11 | gates 19 | phase simul+prune
+  ep 4/12 | return   -2.1 | cnots 40 | gates 16 | phase build_failed
+  ep 5/12 | return   -4.2 | cnots 40 | gates 16 | phase build_failed
+  ep 6/12 | return   -1.6 | cnots 39 | gates 16 | phase build_failed
+  ep 7/12 | return   -0.1 | cnots 50 | gates 16 | phase build_failed
+  ep 8/12 | return   -3.0 | cnots 29 | gates 16 | phase build_failed
+  ep 9/12 | return   -2.0 | cnots 44 | gates 16 | phase build_failed
+  ep 10/12 | return   -1.8 | cnots 13 | gates 16 | phase build_failed
+  ep 11/12 | return   -5.1 | cnots 1 | gates 1 | phase build_failed
+  ep 12/12 | return   -2.0 | cnots 37 | gates 16 | phase build_failed
+update    8/20 | avg return -1.271 | best CNOTs chem:10 exact:-- | target 1.6e-03
+  ep 1/12 | return   -0.9 | cnots 54 | gates 16 | phase build_failed
+  ep 2/12 | return   -1.8 | cnots 13 | gates 16 | phase build_failed
+  ep 3/12 | return    9.3 | cnots 11 | gates 21 | phase simul+prune
+  ep 4/12 | return   -1.2 | cnots 53 | gates 16 | phase build_failed
+  ep 5/12 | return    0.1 | cnots 55 | gates 16 | phase build_failed
+  ep 6/12 | return   -1.8 | cnots 45 | gates 16 | phase build_failed
+  ep 7/12 | return   -3.7 | cnots 42 | gates 16 | phase build_failed
+  ep 8/12 | return   -0.3 | cnots 38 | gates 16 | phase build_failed
+  ep 9/12 | return   -2.0 | cnots 10 | gates 16 | phase build_failed
+  ep 10/12 | return   -1.0 | cnots 70 | gates 16 | phase build_failed
+  ep 11/12 | return   -2.3 | cnots 29 | gates 16 | phase build_failed
+  ep 12/12 | return   -4.3 | cnots 14 | gates 16 | phase build_failed
+update    9/20 | avg return -0.821 | best CNOTs chem:10 exact:-- | target 1.6e-03
+  ep 1/12 | return   -0.5 | cnots 58 | gates 16 | phase build_failed
+  ep 2/12 | return   -1.5 | cnots 53 | gates 16 | phase build_failed
+  ep 3/12 | return   -1.6 | cnots 15 | gates 16 | phase build_failed
+  ep 4/12 | return   -5.3 | cnots 3 | gates 4 | phase build_failed
+  ep 5/12 | return   10.2 | cnots 11 | gates 18 | phase simul+prune
+  ep 6/12 | return   -0.8 | cnots 57 | gates 16 | phase build_failed
+  ep 7/12 | return   -1.8 | cnots 29 | gates 16 | phase build_failed
+  ep 8/12 | return   -1.4 | cnots 40 | gates 16 | phase build_failed
+  ep 9/12 | return    0.3 | cnots 67 | gates 16 | phase build_failed
+  ep 10/12 | return   -5.3 | cnots 2 | gates 6 | phase build_failed
+  ep 11/12 | return   -0.8 | cnots 69 | gates 16 | phase build_failed
+  ep 12/12 | return    6.0 | cnots 13 | gates 29 | phase simul+prune
+update   10/20 | avg return -0.208 | best CNOTs chem:10 exact:-- | target 1.6e-03
+  ep 1/12 | return   -1.1 | cnots 16 | gates 16 | phase build_failed
+  ep 2/12 | return   -1.6 | cnots 25 | gates 16 | phase build_failed
+  ep 3/12 | return   -1.4 | cnots 28 | gates 16 | phase build_failed
+  ep 4/12 | return   -1.1 | cnots 39 | gates 16 | phase build_failed
+  ep 5/12 | return   -0.7 | cnots 55 | gates 16 | phase build_failed
+  ep 6/12 | return   -1.1 | cnots 37 | gates 16 | phase build_failed
+  ep 7/12 | return   -1.7 | cnots 31 | gates 16 | phase build_failed
+  ep 8/12 | return   -1.6 | cnots 15 | gates 16 | phase build_failed
+  ep 9/12 | return   -0.3 | cnots 70 | gates 16 | phase build_failed
+  ep 10/12 | return   14.0 | cnots 9 | gates 18 | phase simul+prune
+  ep 11/12 | return   -1.0 | cnots 44 | gates 16 | phase build_failed
+  ep 12/12 | return   -3.5 | cnots 11 | gates 16 | phase build_failed
+update   11/20 | avg return -0.100 | best CNOTs chem:9 exact:-- | target 1.6e-03
+  ep 1/12 | return   -1.5 | cnots 68 | gates 16 | phase build_failed
+  ep 2/12 | return   16.2 | cnots 10 | gates 21 | phase simul+prune
+  ep 3/12 | return   -2.2 | cnots 40 | gates 16 | phase build_failed
+  ep 4/12 | return    7.2 | cnots 13 | gates 26 | phase simul+prune
+  ep 5/12 | return   -1.4 | cnots 54 | gates 16 | phase build_failed
+  ep 6/12 | return   -1.6 | cnots 59 | gates 16 | phase build_failed
+  ep 7/12 | return    0.5 | cnots 111 | gates 16 | phase build_failed
+  ep 8/12 | return   -0.5 | cnots 81 | gates 16 | phase build_failed
+  ep 9/12 | return   -5.3 | cnots 22 | gates 11 | phase build_failed
+  ep 10/12 | return   -2.2 | cnots 55 | gates 16 | phase build_failed
+  ep 11/12 | return   -0.3 | cnots 81 | gates 16 | phase build_failed
+  ep 12/12 | return   -0.5 | cnots 57 | gates 16 | phase build_failed
+update   12/20 | avg return  0.703 | best CNOTs chem:9 exact:-- | target 1.6e-03
+  ep 1/12 | return    0.3 | cnots 110 | gates 16 | phase build_failed
+  ep 2/12 | return   -1.4 | cnots 50 | gates 16 | phase build_failed
+  ep 3/12 | return   -2.4 | cnots 50 | gates 16 | phase build_failed
+  ep 4/12 | return   -0.6 | cnots 95 | gates 16 | phase build_failed
+  ep 5/12 | return   -0.7 | cnots 55 | gates 16 | phase build_failed
+  ep 6/12 | return   -0.5 | cnots 68 | gates 16 | phase build_failed
+  ep 7/12 | return   -5.2 | cnots 2 | gates 3 | phase build_failed
+  ep 8/12 | return   -0.1 | cnots 96 | gates 16 | phase build_failed
+  ep 9/12 | return   -0.1 | cnots 72 | gates 16 | phase build_failed
+  ep 10/12 | return   -1.1 | cnots 81 | gates 16 | phase build_failed
+  ep 11/12 | return   -0.9 | cnots 64 | gates 16 | phase build_failed
+  ep 12/12 | return    5.0 | cnots 49 | gates 11 | phase prune_skipped_large_compile
+update   13/20 | avg return -0.636 | best CNOTs chem:9 exact:-- | target 1.6e-03
+  ep 1/12 | return    0.2 | cnots 83 | gates 16 | phase build_failed
+  ep 2/12 | return   -0.5 | cnots 57 | gates 16 | phase build_failed
+  ep 3/12 | return   -2.1 | cnots 95 | gates 16 | phase build_failed
+  ep 4/12 | return    4.6 | cnots 32 | gates 12 | phase prune_skipped_large_compile
+  ep 5/12 | return   -1.2 | cnots 65 | gates 16 | phase build_failed
+  ep 6/12 | return    5.1 | cnots 32 | gates 6 | phase prune_skipped_large_compile
+  ep 7/12 | return    0.6 | cnots 110 | gates 16 | phase build_failed
+  ep 8/12 | return   -0.5 | cnots 79 | gates 16 | phase build_failed
+  ep 9/12 | return   -1.0 | cnots 98 | gates 16 | phase build_failed
+  ep 10/12 | return    5.8 | cnots 14 | gates 26 | phase simul+prune
+  ep 11/12 | return    0.0 | cnots 42 | gates 16 | phase build_failed
+  ep 12/12 | return   -0.5 | cnots 57 | gates 16 | phase build_failed
+update   14/20 | avg return  0.873 | best CNOTs chem:9 exact:-- | target 1.6e-03
+  ep 1/12 | return   -0.5 | cnots 90 | gates 16 | phase build_failed
+  ep 2/12 | return    0.4 | cnots 85 | gates 16 | phase build_failed
+  ep 3/12 | return   -0.1 | cnots 83 | gates 16 | phase build_failed
+  ep 4/12 | return   -1.1 | cnots 59 | gates 16 | phase build_failed
+  ep 5/12 | return    0.5 | cnots 68 | gates 16 | phase build_failed
+  ep 6/12 | return   -0.6 | cnots 71 | gates 16 | phase build_failed
+  ep 7/12 | return   15.2 | cnots 11 | gates 22 | phase simul+prune
+  ep 8/12 | return    0.2 | cnots 107 | gates 16 | phase build_failed
+  ep 9/12 | return    9.3 | cnots 12 | gates 22 | phase simul+prune
+  ep 10/12 | return    1.2 | cnots 18 | gates 33 | phase simul+prune
+  ep 11/12 | return   -0.7 | cnots 65 | gates 16 | phase build_failed
+  ep 12/12 | return    0.0 | cnots 79 | gates 16 | phase build_failed
+update   15/20 | avg return  1.978 | best CNOTs chem:9 exact:-- | target 1.6e-03
+  ep 1/12 | return   -1.1 | cnots 83 | gates 16 | phase build_failed
+  ep 2/12 | return    5.0 | cnots 30 | gates 5 | phase prune_skipped_large_compile
+  ep 3/12 | return   -0.9 | cnots 65 | gates 16 | phase build_failed
+  ep 4/12 | return   10.5 | cnots 14 | gates 27 | phase simul+prune
+  ep 5/12 | return   10.2 | cnots 17 | gates 34 | phase simul+prune
+  ep 6/12 | return    5.2 | cnots 32 | gates 5 | phase prune_skipped_large_compile
+  ep 7/12 | return    0.1 | cnots 53 | gates 16 | phase build_failed
+  ep 8/12 | return    0.3 | cnots 99 | gates 16 | phase build_failed
+  ep 9/12 | return    0.2 | cnots 82 | gates 16 | phase build_failed
+  ep 10/12 | return   -0.3 | cnots 69 | gates 16 | phase build_failed
+  ep 11/12 | return   -0.7 | cnots 54 | gates 16 | phase build_failed
+  ep 12/12 | return   -0.1 | cnots 70 | gates 16 | phase build_failed
+update   16/20 | avg return  2.358 | best CNOTs chem:9 exact:-- | target 1.6e-03
+  ep 1/12 | return   -0.1 | cnots 83 | gates 16 | phase build_failed
+  ep 2/12 | return    5.0 | cnots 30 | gates 4 | phase prune_skipped_large_compile
+  ep 3/12 | return   -1.2 | cnots 14 | gates 25 | phase simul+prune
+  ep 4/12 | return    0.3 | cnots 74 | gates 16 | phase build_failed
+  ep 5/12 | return    0.6 | cnots 86 | gates 16 | phase build_failed
+  ep 6/12 | return    0.0 | cnots 30 | gates 16 | phase build_failed
+  ep 7/12 | return   12.9 | cnots 13 | gates 28 | phase simul+prune
+  ep 8/12 | return    0.1 | cnots 26 | gates 16 | phase build_failed
+  ep 9/12 | return   -4.8 | cnots 16 | gates 28 | phase simul+prune
+  ep 10/12 | return    5.1 | cnots 32 | gates 6 | phase prune_skipped_large_compile
+  ep 11/12 | return    5.1 | cnots 28 | gates 3 | phase prune_skipped_large_compile
+  ep 12/12 | return   -0.2 | cnots 14 | gates 26 | phase simul+prune
+update   17/20 | avg return  1.896 | best CNOTs chem:9 exact:-- | target 1.6e-03
+  ep 1/12 | return   -0.0 | cnots 80 | gates 16 | phase build_failed
+  ep 2/12 | return    0.6 | cnots 110 | gates 16 | phase build_failed
+  ep 3/12 | return   -8.9 | cnots 19 | gates 43 | phase simul+prune
+  ep 4/12 | return    4.9 | cnots 32 | gates 6 | phase prune_skipped_large_compile
+  ep 5/12 | return    4.8 | cnots 36 | gates 11 | phase prune_skipped_large_compile
+  ep 6/12 | return   -1.1 | cnots 50 | gates 16 | phase build_failed
+  ep 7/12 | return   -0.9 | cnots 28 | gates 16 | phase build_failed
+  ep 8/12 | return    4.8 | cnots 47 | gates 10 | phase prune_skipped_large_compile
+  ep 9/12 | return    5.2 | cnots 51 | gates 10 | phase prune_skipped_large_compile
+  ep 10/12 | return   -0.7 | cnots 17 | gates 16 | phase build_failed
+  ep 11/12 | return   -0.3 | cnots 69 | gates 16 | phase build_failed
+  ep 12/12 | return   -1.4 | cnots 16 | gates 27 | phase simul+prune
+update   18/20 | avg return  0.591 | best CNOTs chem:9 exact:-- | target 1.6e-03
+  ep 1/12 | return    5.3 | cnots 53 | gates 13 | phase prune_skipped_large_compile
+  ep 2/12 | return    4.6 | cnots 34 | gates 10 | phase prune_skipped_large_compile
+  ep 3/12 | return    5.0 | cnots 65 | gates 14 | phase prune_skipped_large_compile
+  ep 4/12 | return   -0.8 | cnots 108 | gates 16 | phase build_failed
+  ep 5/12 | return    5.3 | cnots 49 | gates 9 | phase prune_skipped_large_compile
+  ep 6/12 | return   16.0 | cnots 10 | gates 18 | phase simul+prune
+  ep 7/12 | return   14.3 | cnots 17 | gates 33 | phase simul+prune
+  ep 8/12 | return   -2.3 | cnots 15 | gates 26 | phase simul+prune
+  ep 9/12 | return    5.3 | cnots 34 | gates 7 | phase prune_skipped_large_compile
+  ep 10/12 | return   17.1 | cnots 20 | gates 40 | phase simul+prune
+  ep 11/12 | return    5.2 | cnots 50 | gates 12 | phase prune_skipped_large_compile
+  ep 12/12 | return   -0.1 | cnots 71 | gates 16 | phase build_failed
+update   19/20 | avg return  6.252 | best CNOTs chem:9 exact:-- | target 1.6e-03
+  ep 1/12 | return    9.1 | cnots 19 | gates 35 | phase simul+prune
+  ep 2/12 | return   12.5 | cnots 14 | gates 27 | phase simul+prune
+  ep 3/12 | return    9.9 | cnots 15 | gates 31 | phase simul+prune
+  ep 4/12 | return   -7.9 | cnots 14 | gates 27 | phase simul+prune
+  ep 5/12 | return    5.3 | cnots 59 | gates 10 | phase prune_skipped_large_compile
+  ep 6/12 | return    4.7 | cnots 13 | gates 24 | phase simul+prune
+  ep 7/12 | return   11.5 | cnots 14 | gates 26 | phase simul+prune
+  ep 8/12 | return   -0.0 | cnots 92 | gates 16 | phase build_failed
+  ep 9/12 | return    0.1 | cnots 121 | gates 16 | phase build_failed
+  ep 10/12 | return   -0.3 | cnots 81 | gates 16 | phase build_failed
+  ep 11/12 | return    9.2 | cnots 16 | gates 34 | phase simul+prune
+  ep 12/12 | return   12.4 | cnots 15 | gates 30 | phase simul+prune
+update   20/20 | avg return  5.543 | best CNOTs chem:9 exact:-- | target 1.5e-03
+  chem: 9 CNOTs, err +1.47e-03
+
+method                                CNOTs  units   err vs FCI  chem exact
+------------------------------------------------------------------------------
+RL hybrid simul_prune (chem) [simul_fast] @ chem      9     18    +1.47e-03     Y     N
+
+Saved results/final_lih_2e4o.json

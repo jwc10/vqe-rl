@@ -1,0 +1,61 @@
+{
+  "fci": -7.6375447458540835,
+  "hf": -7.634630428383792,
+  "chem_acc_Ha": 0.0016,
+  "rows": [
+    {
+      "method": "HF reference",
+      "cnots": 0,
+      "n_units": 0,
+      "err_vs_fci_Ha": 0.002914317470291472,
+      "err_vs_fci_mHa": 2.914317470291472,
+      "within_chem_acc": false,
+      "within_exact_1e-6": false
+    },
+    {
+      "method": "FCI (target)",
+      "cnots": null,
+      "n_units": null,
+      "err_vs_fci_Ha": 0.0,
+      "err_vs_fci_mHa": 0.0,
+      "within_chem_acc": true,
+      "within_exact_1e-6": true
+    },
+    {
+      "method": "14-CNOT baseline (1 double excitation)",
+      "cnots": 14,
+      "n_units": 1,
+      "err_vs_fci_Ha": 0.001467729566421383,
+      "err_vs_fci_mHa": 1.467729566421383,
+      "within_chem_acc": true,
+      "within_exact_1e-6": false
+    },
+    {
+      "method": "ADAPT full (excitations)",
+      "cnots": 46,
+      "n_units": 5,
+      "err_vs_fci_Ha": 2.7839952565500425e-11,
+      "err_vs_fci_mHa": 2.7839952565500425e-08,
+      "within_chem_acc": true,
+      "within_exact_1e-6": true
+    },
+    {
+      "method": "Greedy excitation prune",
+      "cnots": 14,
+      "n_units": 1,
+      "err_vs_fci_Ha": 0.001467729566421383,
+      "err_vs_fci_mHa": 1.467729566421383,
+      "within_chem_acc": true,
+      "within_exact_1e-6": false
+    },
+    {
+      "method": "Greedy raw-gate prune (from ADAPT compile)",
+      "cnots": 23,
+      "n_units": 46,
+      "err_vs_fci_Ha": 0.0014677295661211787,
+      "err_vs_fci_mHa": 1.4677295661211787,
+      "within_chem_acc": true,
+      "within_exact_1e-6": false
+    }
+  ]
+}

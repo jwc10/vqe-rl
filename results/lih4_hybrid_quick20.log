@@ -1,0 +1,114 @@
+
+=== RL hybrid chained (chem) [quick20] on LiH(2e,4o) | device cpu ===
+  ep 1/6 | return    5.0 | cnots 2 | gates 1 | phase build_failed
+  ep 2/6 | return    5.0 | cnots 2 | gates 1 | phase build_failed
+  ep 3/6 | return    5.0 | cnots 14 | gates 1 | phase build_failed
+  ep 4/6 | return    5.0 | cnots 14 | gates 1 | phase build_failed
+  ep 5/6 | return   16.8 | cnots 9 | gates 20 | phase build+prune
+  ep 6/6 | return   14.0 | cnots 12 | gates 26 | phase build+prune
+update    1/15 | avg return  8.467 | best CNOTs chem:-- exact:-- | target 5.0e-03
+  ep 1/6 | return    5.0 | cnots 42 | gates 3 | phase build_failed
+  ep 2/6 | return   -5.0 | cnots 14 | gates 1 | phase build_failed
+  ep 3/6 | return    5.0 | cnots 28 | gates 2 | phase prune_skipped_large_compile
+  ep 4/6 | return    5.0 | cnots 28 | gates 2 | phase prune_skipped_large_compile
+  ep 5/6 | return    7.3 | cnots 12 | gates 23 | phase build+prune
+  ep 6/6 | return   -6.3 | cnots 8 | gates 15 | phase build+prune
+update    2/15 | avg return  1.833 | best CNOTs chem:8 exact:-- | target 2.9e-03
+  ep 1/6 | return    5.0 | cnots 74 | gates 7 | phase prune_too_large
+  ep 2/6 | return    5.8 | cnots 17 | gates 36 | phase build+prune
+  ep 3/6 | return   10.8 | cnots 17 | gates 40 | phase build+prune
+  ep 4/6 | return   -5.0 | cnots 30 | gates 3 | phase build_failed
+  ep 5/6 | return   -5.0 | cnots 0 | gates 0 | phase build_failed
+  ep 6/6 | return   -5.0 | cnots 18 | gates 3 | phase build_failed
+update    3/15 | avg return  1.100 | best CNOTs chem:8 exact:-- | target 2.9e-03
+  ep 1/6 | return    5.0 | cnots 62 | gates 7 | phase prune_too_large
+  ep 2/6 | return   14.1 | cnots 9 | gates 17 | phase build+prune
+  ep 3/6 | return    5.0 | cnots 46 | gates 5 | phase prune_skipped_large_compile
+  ep 4/6 | return   -5.0 | cnots 0 | gates 0 | phase build_failed
+  ep 5/6 | return    5.0 | cnots 30 | gates 3 | phase prune_skipped_large_compile
+  ep 6/6 | return    5.0 | cnots 86 | gates 7 | phase prune_too_large
+update    4/15 | avg return  4.858 | best CNOTs chem:8 exact:-- | target 1.6e-03
+  ep 1/6 | return   -5.0 | cnots 50 | gates 7 | phase build_failed
+  ep 2/6 | return    5.0 | cnots 42 | gates 3 | phase prune_skipped_large_compile
+  ep 3/6 | return    5.0 | cnots 62 | gates 7 | phase prune_too_large
+  ep 4/6 | return   -5.0 | cnots 6 | gates 3 | phase build_failed
+  ep 5/6 | return    7.1 | cnots 18 | gates 39 | phase build+prune
+  ep 6/6 | return    5.0 | cnots 58 | gates 5 | phase prune_skipped_large_compile
+update    5/15 | avg return  2.033 | best CNOTs chem:8 exact:-- | target 1.5e-03
+  ep 1/6 | return    5.0 | cnots 50 | gates 7 | phase prune_skipped_large_compile
+  ep 2/6 | return   12.3 | cnots 12 | gates 23 | phase build+prune
+  ep 3/6 | return    5.0 | cnots 106 | gates 11 | phase prune_too_large
+  ep 4/6 | return    5.0 | cnots 128 | gates 10 | phase prune_too_large
+  ep 5/6 | return   12.5 | cnots 13 | gates 27 | phase build+prune
+  ep 6/6 | return    5.0 | cnots 32 | gates 4 | phase prune_skipped_large_compile
+update    6/15 | avg return  7.483 | best CNOTs chem:8 exact:-- | target 1.5e-03
+  ep 1/6 | return    8.2 | cnots 16 | gates 32 | phase build+prune
+  ep 2/6 | return    5.0 | cnots 114 | gates 9 | phase prune_too_large
+  ep 3/6 | return   -5.0 | cnots 0 | gates 0 | phase build_failed
+  ep 4/6 | return   11.3 | cnots 12 | gates 23 | phase build+prune
+  ep 5/6 | return    5.0 | cnots 70 | gates 5 | phase prune_too_large
+  ep 6/6 | return   10.0 | cnots 14 | gates 28 | phase build+prune
+update    7/15 | avg return  5.758 | best CNOTs chem:8 exact:-- | target 1.5e-03
+  ep 1/6 | return    5.0 | cnots 30 | gates 3 | phase prune_skipped_large_compile
+  ep 2/6 | return   11.5 | cnots 13 | gates 27 | phase build+prune
+  ep 3/6 | return    5.0 | cnots 70 | gates 5 | phase prune_too_large
+  ep 4/6 | return   15.0 | cnots 12 | gates 26 | phase build+prune
+  ep 5/6 | return   10.3 | cnots 10 | gates 21 | phase build+prune
+  ep 6/6 | return    5.0 | cnots 58 | gates 5 | phase prune_skipped_large_compile
+update    8/15 | avg return  8.641 | best CNOTs chem:8 exact:-- | target 1.5e-03
+  ep 1/6 | return    8.2 | cnots 14 | gates 26 | phase build+prune
+  ep 2/6 | return   -5.0 | cnots 0 | gates 0 | phase build_failed
+  ep 3/6 | return   16.5 | cnots 11 | gates 25 | phase build+prune
+  ep 4/6 | return    5.0 | cnots 44 | gates 4 | phase prune_skipped_large_compile
+  ep 5/6 | return   18.0 | cnots 10 | gates 24 | phase build+prune
+  ep 6/6 | return    5.0 | cnots 28 | gates 2 | phase prune_skipped_large_compile
+update    9/15 | avg return  7.950 | best CNOTs chem:8 exact:-- | target 1.5e-03
+  ep 1/6 | return    5.0 | cnots 28 | gates 2 | phase prune_skipped_large_compile
+  ep 2/6 | return   15.0 | cnots 12 | gates 26 | phase build+prune
+  ep 3/6 | return    5.0 | cnots 42 | gates 3 | phase prune_skipped_large_compile
+  ep 4/6 | return    7.0 | cnots 14 | gates 28 | phase build+prune
+  ep 5/6 | return   15.6 | cnots 15 | gates 36 | phase build+prune
+  ep 6/6 | return    9.0 | cnots 14 | gates 28 | phase build+prune
+update   10/15 | avg return  9.441 | best CNOTs chem:8 exact:-- | target 1.5e-03
+  ep 1/6 | return   10.0 | cnots 14 | gates 28 | phase build+prune
+  ep 2/6 | return    5.0 | cnots 28 | gates 2 | phase prune_skipped_large_compile
+  ep 3/6 | return    5.0 | cnots 30 | gates 3 | phase prune_skipped_large_compile
+  ep 4/6 | return    9.1 | cnots 14 | gates 27 | phase build+prune
+  ep 5/6 | return    5.0 | cnots 28 | gates 2 | phase prune_skipped_large_compile
+  ep 6/6 | return   18.0 | cnots 10 | gates 24 | phase build+prune
+update   11/15 | avg return  8.691 | best CNOTs chem:8 exact:-- | target 1.5e-03
+  ep 1/6 | return   12.5 | cnots 13 | gates 27 | phase build+prune
+  ep 2/6 | return    5.0 | cnots 28 | gates 2 | phase prune_skipped_large_compile
+  ep 3/6 | return    5.0 | cnots 28 | gates 2 | phase prune_skipped_large_compile
+  ep 4/6 | return    9.0 | cnots 16 | gates 34 | phase build+prune
+  ep 5/6 | return    5.0 | cnots 30 | gates 3 | phase prune_skipped_large_compile
+  ep 6/6 | return   17.5 | cnots 11 | gates 25 | phase build+prune
+update   12/15 | avg return  9.000 | best CNOTs chem:8 exact:-- | target 1.5e-03
+  ep 1/6 | return    5.0 | cnots 28 | gates 2 | phase prune_skipped_large_compile
+  ep 2/6 | return    5.0 | cnots 30 | gates 3 | phase prune_skipped_large_compile
+  ep 3/6 | return   16.6 | cnots 11 | gates 24 | phase build+prune
+  ep 4/6 | return   17.2 | cnots 10 | gates 22 | phase build+prune
+  ep 5/6 | return   17.6 | cnots 11 | gates 24 | phase build+prune
+  ep 6/6 | return    5.0 | cnots 28 | gates 2 | phase prune_skipped_large_compile
+update   13/15 | avg return 11.067 | best CNOTs chem:8 exact:-- | target 1.5e-03
+  ep 1/6 | return   15.2 | cnots 12 | gates 24 | phase build+prune
+  ep 2/6 | return    5.0 | cnots 28 | gates 2 | phase prune_skipped_large_compile
+  ep 3/6 | return    5.0 | cnots 28 | gates 2 | phase prune_skipped_large_compile
+  ep 4/6 | return    5.0 | cnots 42 | gates 3 | phase prune_skipped_large_compile
+  ep 5/6 | return   22.5 | cnots 9 | gates 23 | phase build+prune
+  ep 6/6 | return   17.2 | cnots 10 | gates 22 | phase build+prune
+update   14/15 | avg return 11.650 | best CNOTs chem:8 exact:-- | target 1.5e-03
+  ep 1/6 | return   23.3 | cnots 8 | gates 19 | phase build+prune
+  ep 2/6 | return    5.0 | cnots 28 | gates 2 | phase prune_skipped_large_compile
+  ep 3/6 | return   19.9 | cnots 7 | gates 17 | phase build+prune
+  ep 4/6 | return    5.0 | cnots 28 | gates 2 | phase prune_skipped_large_compile
+  ep 5/6 | return    5.0 | cnots 28 | gates 2 | phase prune_skipped_large_compile
+  ep 6/6 | return  -42.7 | cnots 12 | gates 27 | phase build+prune
+update   15/15 | avg return  2.583 | best CNOTs chem:7 exact:-- | target 1.5e-03
+  chem: 7 CNOTs, err +1.47e-03
+
+method                                CNOTs  units   err vs FCI  chem exact
+------------------------------------------------------------------------------
+RL hybrid chained (chem) [quick20] @ chem      7     17    +1.47e-03     Y     N
+
+Saved results/final_lih_2e4o.json

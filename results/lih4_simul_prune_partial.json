@@ -1,0 +1,21 @@
+{
+  "status": "killed_at_update_7_of_35",
+  "method": "RL hybrid simul_prune (chem) [medium] — simultaneous Givens+raw build, compile, RL prune",
+  "command": "python run_final_experiments.py --medium --hybrid-simul-prune --phase hybrid --molecule LiH4 --target chem",
+  "reason": "update 8+ hung >10min on huge compiled circuits",
+  "best_at_kill": {
+    "cnots": 7,
+    "error_vs_fci_Ha": 0.00147,
+    "error_mHa": 1.47,
+    "within_chem_acc": true,
+    "first_seen_update": 3
+  },
+  "retries_2026_06_02": {
+    "note": "Reruns after code fixes did not reproduce 7 yet (typically 9–14 CNOTs @ chem acc in ~20–45s). Keep this file as the poster simul+prune result.",
+    "logs": [
+      "results/lih4_simul_prune_medium_retry.log",
+      "results/lih4_simul_prune_medium_retry2.log"
+    ]
+  },
+  "note": "7 CNOTs @ chem acc ties chained hybrid / greedy from 1-double; same ~1.47 mHa"
+}

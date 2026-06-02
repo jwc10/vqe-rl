@@ -1,0 +1,71 @@
+
+=== RL hybrid simultaneous (chem) [medium] on H2 | device cpu ===
+update    1/60 | avg return -1.571 | best CNOTs chem:5 exact:5 | target 1.4e-02
+update    2/60 | avg return -0.659 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update    3/60 | avg return  0.232 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update    4/60 | avg return  0.051 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update    5/60 | avg return  0.813 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update    6/60 | avg return  2.743 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update    7/60 | avg return  3.526 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update    8/60 | avg return  5.069 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update    9/60 | avg return  3.347 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update   10/60 | avg return  4.936 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update   11/60 | avg return  4.996 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update   12/60 | avg return  4.988 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update   13/60 | avg return  5.000 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update   14/60 | avg return  5.000 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update   15/60 | avg return  5.000 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update   16/60 | avg return  4.997 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update   17/60 | avg return  5.000 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update   18/60 | avg return  5.000 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update   19/60 | avg return  5.000 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update   20/60 | avg return  5.000 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update   21/60 | avg return  5.000 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update   22/60 | avg return  5.000 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update   23/60 | avg return  5.000 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update   24/60 | avg return  5.000 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update   25/60 | avg return  5.005 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update   26/60 | avg return  5.000 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update   27/60 | avg return  5.000 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update   28/60 | avg return  5.000 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update   29/60 | avg return  5.000 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update   30/60 | avg return  5.000 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update   31/60 | avg return  5.000 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update   32/60 | avg return  5.000 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update   33/60 | avg return  5.000 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update   34/60 | avg return  5.000 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update   35/60 | avg return  5.000 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update   36/60 | avg return  5.000 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update   37/60 | avg return  5.000 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update   38/60 | avg return  5.000 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update   39/60 | avg return  5.000 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update   40/60 | avg return  5.000 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update   41/60 | avg return  5.000 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update   42/60 | avg return  5.000 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update   43/60 | avg return  5.000 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update   44/60 | avg return  5.000 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update   45/60 | avg return  5.000 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update   46/60 | avg return  5.000 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update   47/60 | avg return  5.000 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update   48/60 | avg return  5.000 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update   49/60 | avg return  5.000 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update   50/60 | avg return  5.000 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update   51/60 | avg return  5.000 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update   52/60 | avg return  5.000 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update   53/60 | avg return  5.000 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update   54/60 | avg return  5.000 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update   55/60 | avg return  5.000 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update   56/60 | avg return  5.000 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update   57/60 | avg return  5.000 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update   58/60 | avg return  5.000 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update   59/60 | avg return  5.000 | best CNOTs chem:5 exact:5 | target 1.6e-03
+update   60/60 | avg return  5.000 | best CNOTs chem:5 exact:5 | target 1.6e-03
+  chem: 5 CNOTs, err +3.75e-11
+  exact: 5 CNOTs, err +3.75e-11
+
+method                                CNOTs  units   err vs FCI  chem exact
+------------------------------------------------------------------------------
+RL hybrid simultaneous (chem) [medium] @ chem      5     14    +3.75e-11     Y     Y
+RL hybrid simultaneous (chem) [medium] @ exact      5     14    +3.75e-11     Y     Y
+
+Saved results/final_h2.json

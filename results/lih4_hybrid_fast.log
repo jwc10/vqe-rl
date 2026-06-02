@@ -1,0 +1,24 @@
+
+=== RL hybrid (chem) [fast] on LiH(2e,4o) | device cpu ===
+update    1/15 | avg return  5.137 | best CNOTs chem:-- exact:-- | target 5.0e-03
+update    2/15 | avg return 10.962 | best CNOTs chem:11 exact:-- | target 2.9e-03
+update    3/15 | avg return  5.606 | best CNOTs chem:10 exact:-- | target 1.6e-03
+update    4/15 | avg return 12.037 | best CNOTs chem:9 exact:-- | target 1.5e-03
+update    5/15 | avg return  0.575 | best CNOTs chem:9 exact:-- | target 1.5e-03
+update    6/15 | avg return 16.230 | best CNOTs chem:9 exact:-- | target 1.5e-03
+update    7/15 | avg return 13.044 | best CNOTs chem:7 exact:-- | target 1.5e-03
+update    8/15 | avg return 15.062 | best CNOTs chem:7 exact:-- | target 1.5e-03
+update    9/15 | avg return 13.562 | best CNOTs chem:7 exact:-- | target 1.5e-03
+update   10/15 | avg return 14.831 | best CNOTs chem:7 exact:-- | target 1.5e-03
+update   11/15 | avg return 15.562 | best CNOTs chem:7 exact:-- | target 1.5e-03
+update   12/15 | avg return 12.663 | best CNOTs chem:7 exact:-- | target 1.5e-03
+update   13/15 | avg return 16.438 | best CNOTs chem:7 exact:-- | target 1.5e-03
+update   14/15 | avg return 15.475 | best CNOTs chem:7 exact:-- | target 1.5e-03
+update   15/15 | avg return  9.960 | best CNOTs chem:7 exact:-- | target 1.5e-03
+  chem: 7 CNOTs, err +1.47e-03
+
+method                                CNOTs  units   err vs FCI  chem exact
+------------------------------------------------------------------------------
+RL hybrid (chem) [fast] @ chem            7     15    +1.47e-03     Y     N
+
+Saved results/final_lih_2e4o.json

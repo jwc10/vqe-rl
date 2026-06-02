@@ -64,6 +64,115 @@ def run_vqe_on_circuit(H, num_qubits, hf_state, actions, x0=None):
             "history": history, "success": result.success}
 
 
+_BASIS_GATES = {"CNOT", "RX", "RY", "RZ", "Hadamard", "PhaseShift", "GlobalPhase", "PauliX"}
+
+_DEV_CACHE: dict = {}
+
+
+def _cached_device(num_qubits):
+    dev = _DEV_CACHE.get(num_qubits)
+    if dev is None:
+        dev = qml.device("lightning.qubit", wires=num_qubits)
+        _DEV_CACHE[num_qubits] = dev
+    return dev
+
+
+def optimize_angles(H, num_qubits, apply_fn, n_params, x0=None,
+                    extra_restarts=1, maxiter=100, seed=0):
+    """
+    Minimize <H> over rotation angles using L-BFGS-B with adjoint (analytic) gradients.
+    Empirically the best inner optimizer for these small circuits: faster and finds far
+    better minima than COBYLA/Adam, and beats QNG (which only pays off in the barren-plateau
+    regime of many qubits). apply_fn(params) applies BasisState + the parameterized circuit
+    (no measurement). x0 warm-starts from previous angles; extra_restarts adds random tries
+    to escape local minima. Returns (min_energy, best_params).
+    """
+    import pennylane.numpy as pnp
+    from scipy.optimize import minimize
+
+    dev = _cached_device(num_qubits)
+
+    @qml.qnode(dev, diff_method="adjoint")
+    def cost(p):
+        apply_fn(p)
+        return qml.expval(H)
+
+    if n_params == 0:
+        return float(np.asarray(cost(pnp.array([]))).item()), np.array([])
+
+    rng = np.random.default_rng(seed)
+    inits = []
+    if x0 is not None and len(np.atleast_1d(x0)) == n_params:
+        inits.append(np.asarray(x0, dtype=float))
+    inits += [rng.uniform(-np.pi, np.pi, n_params) for _ in range(extra_restarts)]
+    if not inits:
+        inits = [rng.uniform(-np.pi, np.pi, n_params)]
+
+    def val_grad(p):
+        pp = pnp.array(p, requires_grad=True)
+        return float(cost(pp)), np.asarray(qml.grad(cost)(pp), dtype=float)
+
+    best_e, best_x = np.inf, inits[0]
+    for ini in inits:
+        res = minimize(val_grad, ini, method="L-BFGS-B", jac=True,
+                       options={"maxiter": maxiter})
+        if res.fun < best_e:
+            best_e, best_x = float(res.fun), np.asarray(res.x, dtype=float)
+    return best_e, best_x
+
+
+def compiled_resources(ops):
+    """
+    Decompose a list of pennylane ops into a basic gate set and count resources.
+    This is the honest hardware-relevant metric: excitation gates are cheap to write
+    but expensive in CNOTs (a DoubleExcitation ~= 14 CNOTs, SingleExcitation ~= 2).
+
+    Returns dict with cnot_count, total_gates, and two_qubit_depth (CNOT-layer depth).
+    """
+    from collections import Counter
+
+    tape = qml.tape.QuantumScript(list(ops), [])
+    (decomposed,), _ = qml.transforms.decompose([tape], gate_set=_BASIS_GATES)
+    counts = Counter(op.name for op in decomposed.operations)
+
+    # CNOT depth: greedy layering over CNOTs only (wires busy within a layer)
+    cnot_depth, layer_wires = 0, set()
+    for op in decomposed.operations:
+        if op.name != "CNOT":
+            continue
+        w = set(op.wires)
+        if w & layer_wires:
+            cnot_depth += 1
+            layer_wires = w
+        else:
+            layer_wires |= w
+    if layer_wires:
+        cnot_depth += 1
+
+    return {
+        "cnot_count": counts.get("CNOT", 0),
+        "total_gates": len(decomposed.operations),
+        "cnot_depth": cnot_depth,
+        "gate_types": dict(counts),
+    }
+
+
+def excitation_ops(actions):
+    """Build the list of excitation ops (no BasisState) for resource counting."""
+    ops = []
+    for a in excitations_from_actions(actions):
+        if a["type"] == "single":
+            ops.append(qml.SingleExcitation(0.0, wires=a["wires"]))
+        else:
+            ops.append(qml.DoubleExcitation(0.0, wires=a["wires"]))
+    return ops
+
+
+def compiled_cnots_for_actions(actions):
+    """Convenience: CNOT count for an excitation-based circuit (ignores HF prep)."""
+    return compiled_resources(excitation_ops(actions))["cnot_count"]
+
+
 def exact_ground_energy(H, num_qubits):
     """FCI in the active space, i.e. lowest eigenvalue of the qubit Hamiltonian."""
     mat = qml.SparseHamiltonian(H.sparse_matrix(), wires=range(num_qubits)).sparse_matrix()

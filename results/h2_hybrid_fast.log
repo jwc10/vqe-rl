@@ -1,0 +1,36 @@
+
+=== RL hybrid (chem) [fast] on H2 | device cpu ===
+update    1/25 | avg return  2.575 | best CNOTs chem:7 exact:7 | target 1.4e-02
+update    2/25 | avg return  6.275 | best CNOTs chem:7 exact:7 | target 1.0e-04
+update    3/25 | avg return  4.675 | best CNOTs chem:7 exact:7 | target 1.0e-04
+update    4/25 | avg return  9.125 | best CNOTs chem:7 exact:7 | target 1.0e-04
+update    5/25 | avg return  8.425 | best CNOTs chem:7 exact:7 | target 1.0e-04
+update    6/25 | avg return 12.575 | best CNOTs chem:7 exact:7 | target 1.0e-04
+update    7/25 | avg return 13.000 | best CNOTs chem:7 exact:7 | target 1.0e-04
+update    8/25 | avg return 14.550 | best CNOTs chem:7 exact:7 | target 1.0e-04
+update    9/25 | avg return 16.562 | best CNOTs chem:7 exact:7 | target 1.0e-04
+update   10/25 | avg return 20.112 | best CNOTs chem:7 exact:7 | target 1.0e-04
+update   11/25 | avg return 21.862 | best CNOTs chem:7 exact:7 | target 1.0e-04
+update   12/25 | avg return 20.925 | best CNOTs chem:7 exact:7 | target 1.0e-04
+update   13/25 | avg return 23.125 | best CNOTs chem:7 exact:7 | target 1.0e-04
+update   14/25 | avg return 24.487 | best CNOTs chem:7 exact:7 | target 1.0e-04
+update   15/25 | avg return 24.900 | best CNOTs chem:7 exact:7 | target 1.0e-04
+update   16/25 | avg return 23.650 | best CNOTs chem:7 exact:7 | target 1.0e-04
+update   17/25 | avg return 25.700 | best CNOTs chem:7 exact:7 | target 1.0e-04
+update   18/25 | avg return 26.512 | best CNOTs chem:7 exact:7 | target 1.0e-04
+update   19/25 | avg return 26.575 | best CNOTs chem:7 exact:7 | target 1.0e-04
+update   20/25 | avg return 24.613 | best CNOTs chem:7 exact:7 | target 1.0e-04
+update   21/25 | avg return 25.263 | best CNOTs chem:7 exact:7 | target 1.0e-04
+update   22/25 | avg return 22.012 | best CNOTs chem:7 exact:7 | target 1.0e-04
+update   23/25 | avg return 19.975 | best CNOTs chem:7 exact:7 | target 1.0e-04
+update   24/25 | avg return 24.413 | best CNOTs chem:7 exact:7 | target 1.0e-04
+update   25/25 | avg return 18.800 | best CNOTs chem:7 exact:7 | target 1.0e-04
+  chem: 7 CNOTs, err +4.44e-16
+  exact: 7 CNOTs, err +4.44e-16
+
+method                                CNOTs  units   err vs FCI  chem exact
+------------------------------------------------------------------------------
+RL hybrid (chem) [fast] @ chem            7     14    +4.44e-16     Y     Y
+RL hybrid (chem) [fast] @ exact           7     14    +4.44e-16     Y     Y
+
+Saved results/final_h2.json

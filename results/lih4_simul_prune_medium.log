@@ -1,0 +1,9 @@
+
+=== RL hybrid simul_prune (chem) [medium] on LiH(2e,4o) | device cpu ===
+update    1/35 | avg return  5.000 | best CNOTs chem:-- exact:-- | target 5.0e-03
+update    2/35 | avg return  2.698 | best CNOTs chem:-- exact:-- | target 3.0e-03
+update    3/35 | avg return -7.078 | best CNOTs chem:7 exact:-- | target 2.9e-03
+update    4/35 | avg return -6.928 | best CNOTs chem:7 exact:-- | target 1.6e-03
+update    5/35 | avg return -4.692 | best CNOTs chem:7 exact:-- | target 1.6e-03
+update    6/35 | avg return -3.045 | best CNOTs chem:7 exact:-- | target 1.6e-03
+update    7/35 | avg return -100.754 | best CNOTs chem:7 exact:-- | target 1.6e-03

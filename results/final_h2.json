@@ -1,0 +1,24 @@
+{
+  "molecule": "H2",
+  "device": "cpu",
+  "rows": [
+    {
+      "method": "RL hybrid simul_prune (chem) [medium] @ chem",
+      "cnots": 4,
+      "n_units": 15,
+      "error_vs_fci": 1.3997358827566586e-10,
+      "within_chem_acc": true,
+      "within_exact": true,
+      "seconds": 526.2247841669887
+    },
+    {
+      "method": "RL hybrid simul_prune (chem) [medium] @ exact",
+      "cnots": 4,
+      "n_units": 15,
+      "error_vs_fci": 1.3997358827566586e-10,
+      "within_chem_acc": true,
+      "within_exact": true,
+      "seconds": 526.2247841669887
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "stopped_at": "2026-06-02",
+  "note": "Salvaged from interrupted background jobs (killed after ~12h CPU)",
+  "LiH4_RL_raw_prune": {
+    "start_circuit": {"n_gates": 96, "cnots": 46, "source": "ADAPT full compiled to raw"},
+    "training_log": "results/lih4_rl_prune.log",
+    "checkpoints": [
+      {"update": 15, "best_cnots": 13, "avg_removed": 16.3},
+      {"update": 30, "best_cnots": 12, "avg_removed": 22.0},
+      {"update": 45, "best_cnots": 12, "avg_removed": 32.0}
+    ],
+    "final_best_cnots_logged": 12,
+    "chem_acc_verified_in_json": false,
+    "poster_claim": "RL prune reached 12 CNOTs in training (vs greedy 23, excitation floor 14); verify energy before final poster"
+  },
+  "LiH4_hybrid": {
+    "status": "no_training_progress",
+    "runtime_hours_approx": 11,
+    "log": "results/lih4_hybrid.log",
+    "recommendation": "use --fast or skip hybrid on LiH"
+  }
+}

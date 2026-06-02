@@ -1,0 +1,52 @@
+{
+  "note": "Consolidated results for poster — compile time 2026-06-02",
+  "metric": "compiled CNOT count at chemical accuracy (1.6 mHa unless noted)",
+  "molecules": {
+    "H2": {
+      "qubits": 4,
+      "fci_hartree": -1.1372633205047162,
+      "rows": [
+        {"method": "ADAPT (excitations)", "cnots": 14, "exact_fci": true, "source": "results/compare_raw_h2.json"},
+        {"method": "ADAPT + greedy raw-gate prune", "cnots": 7, "exact_fci": true, "source": "results/compare_raw_h2.json"},
+        {"method": "ADAPT + RL raw-gate prune", "cnots": 7, "exact_fci": true, "source": "results/compare_raw_h2.json"},
+        {"method": "Raw-gate RL from scratch", "cnots": 3, "exact_fci": true, "source": "results/compare_raw_h2.json"},
+        {"method": "Hybrid Givens → compile → RL prune", "cnots": 7, "exact_fci": true, "source": "results/final_h2.json"}
+      ],
+      "headline": "Raw RL finds 3-CNOT exact-FCI circuit; beats ADAPT→prune (7) and excitation ADAPT (14)."
+    },
+    "LiH_2e4o": {
+      "qubits": 8,
+      "fci_hartree": -7.637544745854126,
+      "hf_to_fci_gap_mha": 2.91,
+      "rows": [
+        {"method": "ADAPT full (to exact FCI)", "cnots": 46, "chem_acc": true, "exact_fci": true, "source": "results/lih_raw_lih_8q.json"},
+        {"method": "14-CNOT excitation baseline (see below)", "cnots": 14, "chem_acc": true, "exact_fci": false, "n_excitations": 1},
+        {"method": "Greedy raw-gate prune (from compiled ADAPT)", "cnots": 23, "chem_acc": true, "exact_fci": false, "note": "~6h CPU; from conversation / greedy run"},
+        {"method": "RL raw from scratch", "cnots": null, "chem_acc": false, "note": "STOP collapse", "source": "results/lih_raw_lih_8q.json"},
+        {"method": "RL Givens + order", "cnots": 14, "chem_acc": true, "note": "Same as single-double baseline, not novel", "source": "results/lih_raw_lih_8q.json"},
+        {"method": "RL raw-gate prune (from ADAPT compile, interrupted)", "cnots": 12, "err_mHa": null, "chem_acc": "log only — not re-saved", "source": "results/lih4_interrupted_runs.json"},
+        {"method": "RL hybrid fast (Givens→compile→prune)", "cnots": 7, "err_mHa": 1.47, "chem_acc": true, "exact_fci": false, "source": "results/final_lih_2e4o.json"}
+      ],
+      "headline": "At chem acc: excitation floor is 14 CNOTs (one double); ADAPT-overkill is 46; greedy raw-prune 23; RL prune trending to 12."
+    }
+  },
+  "baseline_14_cnot_explained": {
+    "what": "One DoubleExcitation on top of HF in the LiH(2e,4o) active space.",
+    "why_14": "PennyLane compiles DoubleExcitation to 14 CNOTs (same as H2).",
+    "energy": "Reaches chemical accuracy (~1.5 mHa error) but NOT exact FCI (2.91 mHa correlation gap remains).",
+    "who_finds_it": "Brute-force scan over doubles, ADAPT after 1st step, greedy excitation prune, RL Givens — all equivalent.",
+    "not_the_same_as": "ADAPT full circuit (46 CNOTs, 5 excitations, exact FCI)."
+  },
+  "poster_talking_points": [
+    "Compare three strategies on compiled CNOTs: from-scratch raw RL, ADAPT→compile→prune, hybrid Givens→prune.",
+    "H2: raw RL wins (3 CNOTs, exact FCI).",
+    "LiH: raw RL from scratch fails; symmetry in action space (Givens) hits 14 CNOT floor; pruning ADAPT compile gets 23 (greedy) or ~12 (RL, in progress).",
+    "Honest negative: unconstrained raw gates do not scale to 8q LiH without paper-scale training."
+  ],
+  "kill_recommended": ["LiH4 hybrid job (no progress in 11h)"],
+  "time_budget_90min": [
+    "Stop hybrid now; let prune finish OR stop at update 60 if still 12 CNOTs.",
+    "Do not start new long runs; use poster_summary.json + existing PNGs.",
+    "Optional 10min: python compare_raw.py --molecule H2 if figures missing."
+  ]
+}
