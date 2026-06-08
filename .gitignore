@@ -7,3 +7,6 @@ datasets/
 # local deliverables, kept out of the code repo
 report/
 poster/
+
+# report build zip (deliverable, not code)
+*.zip

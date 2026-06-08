@@ -9,7 +9,8 @@ count after decomposing to `{RX, RY, RZ, CNOT}`, not the excitation count. Simul
 
 Headline results: on H2, raw-gate RL finds a 3-CNOT exact circuit. On LiH (8 qubits) at
 chemical accuracy, RL matches greedy at the 7-CNOT floor from a one-double start and beats
-greedy (11-20 vs 23 CNOTs) from a full ADAPT start. The full writeup is in `report/`.
+greedy (11-20 vs 23 CNOTs) from a full ADAPT start. The written report is submitted separately
+on Gradescope and is not tracked in this repository.
 
 ## Setup
 
@@ -67,7 +68,6 @@ Campaign and reporting:
 
 Other:
 - `curriculum.py` moving accuracy threshold for curriculum runs
-- `report/` final report (LaTeX)
 - `results/final_report/` figures and aggregated `master_results.json`
 - `FINAL_REPORT_CONTEXT.md` provenance for every number; `LIH_CAMPAIGN.md` campaign protocol
 
