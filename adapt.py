@@ -9,7 +9,7 @@ from __future__ import annotations
 import numpy as np
 import pennylane as qml
 
-from vqe_core import describe_actions, run_vqe_on_circuit
+from vqe_core import describe_actions, pick_vqe_device, run_vqe_on_circuit
 
 
 def _apply_gate(action, theta):
@@ -21,7 +21,7 @@ def _apply_gate(action, theta):
 
 def _grad_qnode(H, num_qubits, hf_state, chosen, params, candidate):
     # d<H>/d(candidate angle) at 0, with chosen operators fixed at their angles
-    dev = qml.device("lightning.qubit", wires=num_qubits)
+    dev = pick_vqe_device(num_qubits)
 
     @qml.qnode(dev)
     def circuit(theta):

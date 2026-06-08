@@ -17,7 +17,7 @@ def excitations_from_actions(actions):
 def make_structure_qnode(H, num_qubits, hf_state, actions):
     """Build the VQE circuit for a set of excitations, one angle per gate."""
     excitations = excitations_from_actions(actions)
-    dev = qml.device("lightning.qubit", wires=num_qubits)
+    dev = pick_vqe_device(num_qubits)
 
     if not excitations:
         @qml.qnode(dev)
@@ -69,10 +69,22 @@ _BASIS_GATES = {"CNOT", "RX", "RY", "RZ", "Hadamard", "PhaseShift", "GlobalPhase
 _DEV_CACHE: dict = {}
 
 
+def pick_vqe_device(num_qubits):
+    """Prefer VQE_DEVICE env (e.g. lightning.gpu on Modal); fall back to lightning.qubit."""
+    import os
+    pref = os.environ.get("VQE_DEVICE", "lightning.qubit")
+    for name in (pref, "lightning.gpu", "lightning.qubit", "default.qubit"):
+        try:
+            return qml.device(name, wires=num_qubits)
+        except Exception:
+            continue
+    return qml.device("default.qubit", wires=num_qubits)
+
+
 def _cached_device(num_qubits):
     dev = _DEV_CACHE.get(num_qubits)
     if dev is None:
-        dev = qml.device("lightning.qubit", wires=num_qubits)
+        dev = pick_vqe_device(num_qubits)
         _DEV_CACHE[num_qubits] = dev
     return dev
 

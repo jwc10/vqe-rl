@@ -1,0 +1,41 @@
+[
+  {
+    "pair": "1double_chem",
+    "start": "1-double compile",
+    "target": "chem_acc",
+    "greedy_cnots": 7,
+    "greedy_err_mHa": 1.4677295664089485,
+    "rl_cnots": 7,
+    "rl_err_mHa": 1.4677295661202905,
+    "rl_beats_greedy_cnots": false,
+    "rl_ties_greedy": true,
+    "meets_goal": true,
+    "goal_cnots": 7
+  },
+  {
+    "pair": "adapt_chem",
+    "start": "full ADAPT compile",
+    "target": "chem_acc",
+    "greedy_cnots": 23,
+    "greedy_err_mHa": 1.467729566152265,
+    "rl_cnots": null,
+    "rl_err_mHa": null,
+    "rl_beats_greedy_cnots": false,
+    "rl_ties_greedy": false,
+    "meets_goal": false,
+    "goal_cnots": null
+  },
+  {
+    "pair": "adapt_exact",
+    "start": "full ADAPT compile",
+    "target": "exact_FCI",
+    "greedy_cnots": 25,
+    "greedy_err_mHa": 0.0007957148993043006,
+    "rl_cnots": null,
+    "rl_err_mHa": null,
+    "rl_beats_greedy_cnots": false,
+    "rl_ties_greedy": false,
+    "meets_goal": false,
+    "goal_cnots": 25
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "rows": {
+    "greedy_1double_chem": {
+      "cnots": 7,
+      "err_mHa": 1.4677295664089485
+    },
+    "greedy_adapt_chem": {
+      "cnots": 23,
+      "err_mHa": 1.467729566152265,
+      "within_exact": false
+    },
+    "greedy_adapt_exact": {
+      "cnots": 25,
+      "err_mHa": 0.0007957148993043006,
+      "within_exact": true
+    },
+    "adapt_start": {
+      "cnots": 46,
+      "n_gates": 96
+    }
+  }
+}

@@ -1,0 +1,28 @@
+[
+  {
+    "pair": "1double_chem",
+    "start": "1-double compile",
+    "target": "chem_acc",
+    "greedy_cnots": 6,
+    "greedy_err_mHa": 1.5544395156830149,
+    "rl_cnots": 6,
+    "rl_err_mHa": 1.5544395156794621,
+    "rl_beats_greedy_cnots": false,
+    "rl_ties_greedy": true,
+    "meets_goal": true,
+    "goal_cnots": 7
+  },
+  {
+    "pair": "adapt_chem",
+    "start": "full ADAPT compile",
+    "target": "chem_acc",
+    "greedy_cnots": 16,
+    "greedy_err_mHa": 1.5544395156830149,
+    "rl_cnots": null,
+    "rl_err_mHa": null,
+    "rl_beats_greedy_cnots": false,
+    "rl_ties_greedy": false,
+    "meets_goal": false,
+    "goal_cnots": null
+  }
+]

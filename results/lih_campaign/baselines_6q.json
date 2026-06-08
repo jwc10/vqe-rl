@@ -1,0 +1,20 @@
+{
+  "molecule": "LiH(2e,3o)",
+  "qubits": 6,
+  "rows": {
+    "greedy_1double_chem": {
+      "cnots": 6,
+      "err_mHa": 1.5544395156759094,
+      "source": "computed"
+    },
+    "adapt_start": {
+      "cnots": 32,
+      "n_gates": 68
+    },
+    "greedy_adapt_chem": {
+      "cnots": 16,
+      "err_mHa": 1.5544395156865676,
+      "source": "computed"
+    }
+  }
+}

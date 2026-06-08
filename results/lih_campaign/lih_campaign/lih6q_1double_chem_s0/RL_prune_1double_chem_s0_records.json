@@ -1,0 +1,136 @@
+{
+  "records": [
+    {
+      "name": "CNOT",
+      "wires": [
+        0,
+        2
+      ],
+      "param": null
+    },
+    {
+      "name": "Hadamard",
+      "wires": [
+        3
+      ],
+      "param": null
+    },
+    {
+      "name": "Hadamard",
+      "wires": [
+        0
+      ],
+      "param": null
+    },
+    {
+      "name": "CNOT",
+      "wires": [
+        0,
+        1
+      ],
+      "param": null
+    },
+    {
+      "name": "RY",
+      "wires": [
+        0
+      ],
+      "param": 0.5200166572852037
+    },
+    {
+      "name": "Hadamard",
+      "wires": [
+        3
+      ],
+      "param": null
+    },
+    {
+      "name": "RY",
+      "wires": [
+        1
+      ],
+      "param": -1.1059337334568953
+    },
+    {
+      "name": "RY",
+      "wires": [
+        0
+      ],
+      "param": -3.224687414150007
+    },
+    {
+      "name": "CNOT",
+      "wires": [
+        2,
+        1
+      ],
+      "param": null
+    },
+    {
+      "name": "CNOT",
+      "wires": [
+        2,
+        0
+      ],
+      "param": null
+    },
+    {
+      "name": "RY",
+      "wires": [
+        1
+      ],
+      "param": -3.378285461014002
+    },
+    {
+      "name": "Hadamard",
+      "wires": [
+        3
+      ],
+      "param": null
+    },
+    {
+      "name": "RY",
+      "wires": [
+        1
+      ],
+      "param": 1.627795959980303
+    },
+    {
+      "name": "RY",
+      "wires": [
+        0
+      ],
+      "param": 2.9339587827472933
+    },
+    {
+      "name": "CNOT",
+      "wires": [
+        0,
+        1
+      ],
+      "param": null
+    },
+    {
+      "name": "Hadamard",
+      "wires": [
+        0
+      ],
+      "param": null
+    },
+    {
+      "name": "Hadamard",
+      "wires": [
+        3
+      ],
+      "param": null
+    },
+    {
+      "name": "CNOT",
+      "wires": [
+        0,
+        2
+      ],
+      "param": null
+    }
+  ]
+}
