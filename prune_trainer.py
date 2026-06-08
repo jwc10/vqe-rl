@@ -49,10 +49,11 @@ def bc_pretrain(net, trace, device, epochs=15, lr=1e-3, batch_size=64):
         for start in range(0, n, batch_size):
             ix = perm[start:start + batch_size]
             logits, _ = net(obs[ix], masks[ix])
-            last_loss = F.cross_entropy(logits, acts[ix]).item()
+            loss = F.cross_entropy(logits, acts[ix])
             opt.zero_grad()
-            F.cross_entropy(logits, acts[ix]).backward()
+            loss.backward()
             opt.step()
+            last_loss = loss.item()
     return last_loss
 
 
@@ -80,9 +81,7 @@ def train_prune_campaign(
     log_every=1,
     out_dir=None,
 ):
-    """
-    Unique pipeline: greedy trace -> BC -> PPO explores non-greedy removal orders.
-    """
+    # greedy trace -> behavioral clone -> PPO explores non-greedy removal orders
     torch.manual_seed(seed)
     rng = np.random.default_rng(seed)
     dev = pick_device()
@@ -117,10 +116,6 @@ def train_prune_campaign(
     start_ev = eval_records(cfg, start_records, inner_maxiter)
     best = {**start_ev, "label": label, "update": 0}
     best_recs = deepcopy(start_records)
-    if start_ev["error_vs_fci"] < target:
-        pass
-    elif start_ev["error_vs_fci"] < best.get("error_vs_fci", np.inf):
-        best = {**start_ev, "label": label, "update": 0}
 
     log = []
     t0 = time.perf_counter()

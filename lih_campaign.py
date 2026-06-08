@@ -1,20 +1,6 @@
 #!/usr/bin/env python3
-"""
-LiH campaign with fair paired comparisons (same start → greedy vs RL prune).
-
-Phases (time-budget aware):
-  baselines     — greedy floors (fast 1-double + optional ADAPT greedy)
-  focus         — **Modal ~5h default**: 1-double pair + ADAPT chem pair only
-  prune         — RL prune pairs (use with --pairs)
-  smoke         — local short test (baselines + both pairs @ smoke preset)
-
-Primary goal: **7 CNOTs @ chem acc** from 1-double compile (greedy floor).
-
-Usage:
-  python lih_campaign.py --phase smoke
-  python lih_campaign.py --phase focus --preset modal_5h
-  modal run modal_lih.py --phase focus --preset modal_5h
-"""
+# LiH fair-pair campaign: same start circuit, greedy vs RL prune.
+# Phases: baselines, focus (1-double + adapt chem), prune, smoke.
 
 from __future__ import annotations
 
@@ -68,7 +54,7 @@ def _load_cached_greedy():
 
 
 def run_baselines(cfg, *, run_adapt_greedy=True, run_exact_greedy=False):
-    """Greedy floors. 1-double is fast (~1 min); ADAPT greedy is slow (~25–40 min)."""
+    # greedy floors: 1-double is fast (~1 min), ADAPT greedy is slow (~25-40 min)
     fci = cfg["fci_energy"]
     rows = _load_cached_greedy()
     od = one_double_records(cfg)
@@ -87,7 +73,7 @@ def run_baselines(cfg, *, run_adapt_greedy=True, run_exact_greedy=False):
     rows["adapt_start"] = {"cnots": count_cnots(ar), "n_gates": len(ar)}
 
     if run_adapt_greedy and "greedy_adapt_chem" not in rows:
-        print("  greedy ADAPT (chem) — slow, ~25–40 min...", flush=True)
+        print("  greedy ADAPT (chem), slow, ~25-40 min...", flush=True)
         gp = greedy_raw_prune(cfg["H"], cfg["num_qubits"], cfg["hf_state"], ar, fci,
                               chem_acc=CHEM, extra_restarts=0, maxiter=50, verbose=True)
         rows["greedy_adapt_chem"] = {
@@ -96,7 +82,7 @@ def run_baselines(cfg, *, run_adapt_greedy=True, run_exact_greedy=False):
         }
 
     if run_exact_greedy:
-        print("  greedy ADAPT (exact) — slow...", flush=True)
+        print("  greedy ADAPT (exact), slow...", flush=True)
         gex = greedy_raw_prune(cfg["H"], cfg["num_qubits"], cfg["hf_state"], ar, fci,
                                chem_acc=EXACT, extra_restarts=0, maxiter=50, verbose=True)
         rows["greedy_adapt_exact"] = {

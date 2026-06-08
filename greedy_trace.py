@@ -1,4 +1,4 @@
-# Record greedy removal trajectories for behavioral-cloning warm-start (unique vs pure greedy).
+# Record greedy removal trajectories for behavioral-cloning warm-start.
 
 from __future__ import annotations
 
@@ -11,10 +11,7 @@ from raw_prune import _optimized_energy, count_cnots
 def greedy_prune_with_trace(cfg, start_records, fci, chem_acc=1.6e-3,
                             order_k=4, inner_maxiter=60, inner_restarts=0,
                             verbose=False):
-    """
-    Mirror greedy backward elimination but emit (obs, action, mask) steps compatible
-    with RawGatePruneEnv — used to warm-start RL prune before PPO fine-tuning.
-    """
+    # greedy backward elimination, emitting (obs, action, mask) steps for the prune env
     H, nq, hf = cfg["H"], cfg["num_qubits"], cfg["hf_state"]
     env = RawGatePruneEnv(
         cfg, start_records, target=chem_acc, strict=False, order_k=order_k,

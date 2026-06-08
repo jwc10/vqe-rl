@@ -236,7 +236,7 @@ def fig_1double_seeds(data):
     ax.bar([f"seed {s}" for s in seeds], cnots, color="#3498db", width=0.5)
     ax.axhline(7, color="#e74c3c", ls="--", label="Greedy (7)")
     ax.set_ylabel("CNOTs @ chem acc")
-    ax.set_title("LiH 8q: 1-double start — RL vs greedy across Modal seeds")
+    ax.set_title("LiH 8q: 1-double start - RL vs greedy across Modal seeds")
     ax.legend()
     ax.set_ylim(0, 10)
     fig.tight_layout()
@@ -256,7 +256,7 @@ def fig_modal_campaign_summary(data):
             f"s{run.get('seed', '?')}",
             str(run.get("cnots", "?")),
             f"{run.get('err_mHa', 0):.2f}" if run.get("err_mHa") else "?",
-            "✓" if run.get("beats_greedy") else ("tie" if run.get("cnots") == run.get("greedy_baseline_cnots") else "—"),
+            "✓" if run.get("beats_greedy") else ("tie" if run.get("cnots") == run.get("greedy_baseline_cnots") else "-"),
             run.get("status", "complete")[:12],
         ])
     if not rows:
@@ -268,7 +268,7 @@ def fig_modal_campaign_summary(data):
     table.auto_set_font_size(False)
     table.set_fontsize(9)
     table.scale(1, 1.4)
-    ax.set_title("Modal GPU campaign — completed RL prune runs", pad=20)
+    ax.set_title("Modal GPU campaign - completed RL prune runs", pad=20)
     fig.tight_layout()
     fig.savefig(OUT / "fig07_modal_campaign_table.png")
     plt.close(fig)

@@ -1,13 +1,8 @@
 #!/usr/bin/env python3
-"""
-Modal GPU runners — jobs designed to finish in ~2–5h each (hard cap 7h, <<10h).
-
-  modal run modal_lih.py --pairs adapt_chem --seed 0
-  modal run modal_lih.py::bundle          # 1-double s0–2 + ADAPT s1–2
-  modal run modal_lih.py::beef            # heavy 1-double + hybrid simul+prune (H100)
-
-Results: modal volume get vqe-rl-results lih_campaign ./results/lih_campaign
-"""
+# Modal GPU runners for the LiH prune campaign (each job targets ~2-5h, hard cap 7h).
+#   modal run modal_lih.py --pairs adapt_chem --seed 0
+#   modal run modal_lih.py::bundle   # 1-double s0-2 + ADAPT s1-2
+# Fetch: modal volume get vqe-rl-results lih_campaign ./results/lih_campaign
 
 from __future__ import annotations
 
@@ -173,7 +168,7 @@ def run_heavy_1double(seed: int = 10):
     volumes={VOL_PATH: VOL},
 )
 def run_hybrid_simul_prune(seed: int = 0):
-    """Givens+raw build to chem acc, compile, RL prune — end-to-end pipeline."""
+    """Givens+raw build to chem acc, compile, RL prune - end-to-end pipeline."""
     import os
     import shutil
 
@@ -299,7 +294,7 @@ def beef():
     volumes={VOL_PATH: VOL},
 )
 def run_lih_6q(pair: str = "adapt_chem", seed: int = 0):
-    """LiH(2e,3o) fair prune — faster than 8q; greedy ADAPT floor 16 vs 1-double 6."""
+    """LiH(2e,3o) fair prune - faster than 8q; greedy ADAPT floor 16 vs 1-double 6."""
     import os
     import shutil
 
@@ -356,7 +351,7 @@ def lih6q():
 )
 def run_lih_10q_rl_prune(seed: int = 0):
     """
-    LiH(2e,5o) RL prune from ADAPT — no greedy baseline (too slow at 180 gates).
+    LiH(2e,5o) RL prune from ADAPT - no greedy baseline (too slow at 180 gates).
     Scalability probe: can RL compress to chem acc when greedy is infeasible?
     """
     import os
@@ -431,7 +426,7 @@ def run_lih_10q_rl_prune(seed: int = 0):
 
 @app.local_entrypoint()
 def lih10q():
-    """LiH 10q RL-only prune (no greedy BC) — scalability story."""
+    """LiH 10q RL-only prune (no greedy BC) - scalability story."""
     with modal.enable_output():
         print(run_lih_10q_rl_prune.remote(0))
 

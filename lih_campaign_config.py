@@ -118,7 +118,7 @@ HYBRID_UNIQUE = TrainPreset(
     inner_maxiter=60,
 )
 
-# Heavy 1-double prune: ~1–2h GPU, 500 updates, stronger inner opt (still unlikely <7 CNOTs)
+# Heavy 1-double prune: ~1-2h GPU, 500 updates, stronger inner opt (still unlikely <7 CNOTs)
 MODAL_HEAVY_1DOUBLE = TrainPreset(
     name="modal_heavy_1double",
     updates=500,
@@ -132,8 +132,7 @@ MODAL_HEAVY_1DOUBLE = TrainPreset(
     moving_threshold=True,
 )
 
-# simul+prune hybrid on Modal: build to chem acc then prune (~3–5h, max_compile_gates caps blowups)
-# LiH 2e,5o (10q): skip greedy BC/trace — prohibitive at 180 gates; RL-only scalability probe
+# LiH 2e,5o (10q): skip greedy BC/trace (prohibitive at 180 gates), RL-only scalability probe
 MODAL_10Q_RL = {
     "updates": 20,
     "episodes_per_update": 8,

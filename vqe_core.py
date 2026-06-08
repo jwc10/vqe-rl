@@ -91,14 +91,7 @@ def _cached_device(num_qubits):
 
 def optimize_angles(H, num_qubits, apply_fn, n_params, x0=None,
                     extra_restarts=1, maxiter=100, seed=0):
-    """
-    Minimize <H> over rotation angles using L-BFGS-B with adjoint (analytic) gradients.
-    Empirically the best inner optimizer for these small circuits: faster and finds far
-    better minima than COBYLA/Adam, and beats QNG (which only pays off in the barren-plateau
-    regime of many qubits). apply_fn(params) applies BasisState + the parameterized circuit
-    (no measurement). x0 warm-starts from previous angles; extra_restarts adds random tries
-    to escape local minima. Returns (min_energy, best_params).
-    """
+    # L-BFGS-B with adjoint gradients. x0 warm-starts; extra_restarts adds random tries.
     import pennylane.numpy as pnp
     from scipy.optimize import minimize
 
@@ -134,13 +127,7 @@ def optimize_angles(H, num_qubits, apply_fn, n_params, x0=None,
 
 
 def compiled_resources(ops):
-    """
-    Decompose a list of pennylane ops into a basic gate set and count resources.
-    This is the honest hardware-relevant metric: excitation gates are cheap to write
-    but expensive in CNOTs (a DoubleExcitation ~= 14 CNOTs, SingleExcitation ~= 2).
-
-    Returns dict with cnot_count, total_gates, and two_qubit_depth (CNOT-layer depth).
-    """
+    # Decompose to the native gate set and count CNOTs, total gates, and CNOT-layer depth.
     from collections import Counter
 
     tape = qml.tape.QuantumScript(list(ops), [])
