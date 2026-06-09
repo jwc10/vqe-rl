@@ -51,10 +51,10 @@ def fig_h2_cnots(data):
 
 
 def fig_lih8_fair_pairs(data):
-    """Apples-to-apples: same start circuit, greedy vs best RL."""
+    """Same start circuit: greedy vs best RL."""
     pairs = [
-        ("1double_chem", "1-double compile → prune @ chem", 7),
-        ("adapt_chem", "full ADAPT compile → prune @ chem", 23),
+        ("1double_chem", "1-double start, prune @ chem", 7),
+        ("adapt_chem", "full ADAPT start, prune @ chem", 23),
     ]
     greedy_c, rl_best, rl_labels = [], [], []
     for pair_id, _, g in pairs:
@@ -85,7 +85,7 @@ def fig_lih8_fair_pairs(data):
     ax.set_xticks(x)
     ax.set_xticklabels([p[1] for p in pairs], fontsize=9)
     ax.set_ylabel("Compiled CNOTs @ chem acc (1.6 mHa)")
-    ax.set_title("LiH 8q: fair head-to-head (same starting circuit)")
+    ax.set_title("LiH 8q: matched-start comparison")
     ax.legend()
     for bars in (b1, b2):
         for bar in bars:
@@ -117,7 +117,7 @@ def fig_adapt_chem_learning_curves(data):
         seed = run.get("seed", "?")
         final = run["cnots"]
         ax.plot(xs, ys, marker="o", ms=3, lw=1.5,
-                label=f"seed {seed} → {final} CNOTs ({dev})")
+                label=f"seed {seed}: {final} CNOTs ({dev})")
     ax.axhline(23, color="#e74c3c", ls="--", lw=1.5, label="Greedy floor (23)")
     ax.set_xlabel("PPO update")
     ax.set_ylabel("Best CNOTs so far @ chem acc")
@@ -153,7 +153,7 @@ def fig_multiscale_greedy_rl(data):
     x = np.arange(3)
     w = 0.35
     fig, ax = plt.subplots(figsize=(8, 5))
-    ax.bar(x - w / 2, greedy, w, label="Greedy ADAPT→prune @ chem", color="#e74c3c")
+    ax.bar(x - w / 2, greedy, w, label="Greedy ADAPT prune @ chem", color="#e74c3c")
     rl_vals = [b if b is not None else 0 for b in rl_best]
     colors = ["#2ecc71" if b else "#bdc3c7" for b in rl_best]
     ax.bar(x + w / 2, rl_vals, w, label="Best RL prune @ chem", color=colors)
@@ -214,7 +214,7 @@ def fig_energy_cnot_pareto(data):
     ax.axhline(CHEM, color="#f39c12", ls=":", lw=1.5, label="Chem acc (1.6 mHa)")
     ax.axhline(0.001, color="#9b59b6", ls=":", lw=1, alpha=0.7, label="1 mHa (near-exact)")
     ax.set_xlabel("Compiled CNOT count")
-    ax.set_ylabel("|E − E_FCI| (mHa)")
+    ax.set_ylabel("|E - E_FCI| (mHa)")
     ax.set_yscale("log")
     ax.set_title("LiH 8q: energy error vs compiled CNOTs")
     ax.legend(fontsize=8)

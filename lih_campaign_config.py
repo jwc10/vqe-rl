@@ -10,7 +10,7 @@ EXACT = 1e-6
 # Primary LiH goal: match or beat greedy prune from 1-double compile
 TARGET_CHEM_CNOTS = 7
 
-# Fair comparison pairs: same start circuit → greedy vs RL prune
+# Comparison pairs: same start circuit, greedy vs RL prune
 FAIR_PAIRS = {
     "1double_chem": {
         "label": "1-double compile",

@@ -95,7 +95,7 @@ def run_baselines(cfg, *, run_adapt_greedy=True, run_exact_greedy=False):
 
 
 def build_fair_comparison(baselines, rl_runs):
-    """Apples-to-apples: same start circuit → greedy vs RL prune."""
+    # same start circuit, greedy vs RL prune
     by_pair = {r["pair_id"]: r for r in rl_runs if "pair_id" in r}
     rows = []
     for pair_id, meta in sorted(FAIR_PAIRS.items(), key=lambda x: x[1]["priority"]):
@@ -139,8 +139,8 @@ def run_prune_pair(cfg, start_records, pair_id, baselines, preset, seed=0):
     greedy_bl = {"cnots": gb["cnots"], "error_vs_fci": gb["err_mHa"] / 1000}
 
     suffix = "chem" if meta["target"] == CHEM else "exact"
-    print(f"\n=== FAIR PAIR: {meta['label']} | greedy {gb['cnots']} CNOTs "
-          f"→ RL prune ({preset.name}, {n_upd} upd) ===", flush=True)
+    print(f"\n=== matched pair: {meta['label']} | greedy {gb['cnots']} CNOTs "
+          f"-> RL prune ({preset.name}, {n_upd} upd) ===", flush=True)
 
     res, _, _ = train_prune_campaign(
         cfg, start_records,
@@ -284,7 +284,7 @@ def main():
     (OUT / "campaign_report.json").write_text(json.dumps(report, indent=2, default=str))
     (OUT / "fair_comparison.json").write_text(json.dumps(fair, indent=2))
 
-    print("\n=== FAIR COMPARISON (same start → greedy vs RL) ===", flush=True)
+    print("\n=== matched comparison (same start, greedy vs RL) ===", flush=True)
     for row in fair:
         print(f"  {row['start']:22s} | greedy {row['greedy_cnots']:2d} | "
               f"RL {row['rl_cnots']} | beats_greedy={row['rl_beats_greedy_cnots']} | "

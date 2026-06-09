@@ -1,8 +1,5 @@
 #!/usr/bin/env python3
 # Modal GPU runners for the LiH prune campaign (each job targets ~2-5h, hard cap 7h).
-#   modal run modal_lih.py --pairs adapt_chem --seed 0
-#   modal run modal_lih.py::bundle   # 1-double s0-2 + ADAPT s1-2
-# Fetch: modal volume get vqe-rl-results lih_campaign ./results/lih_campaign
 
 from __future__ import annotations
 
