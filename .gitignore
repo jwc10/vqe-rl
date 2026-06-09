@@ -10,3 +10,8 @@ poster/
 
 # report build zip (deliverable, not code)
 *.zip
+
+# notes kept local, not pushed to the remote
+README.md
+FINAL_REPORT_CONTEXT.md
+LIH_CAMPAIGN.md
