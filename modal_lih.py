@@ -254,7 +254,7 @@ def main(
 
 @app.local_entrypoint()
 def bundle():
-    """Parallel: 3× 1-double (modal_5h) + 2× ADAPT replicate."""
+    """Parallel: 3x 1-double (modal_5h) + 2x ADAPT replicate."""
     jobs = [
         ("1double_chem", 0), ("1double_chem", 1), ("1double_chem", 2),
         ("adapt_chem", 1), ("adapt_chem", 2),
@@ -273,7 +273,7 @@ def bundle():
 
 @app.local_entrypoint()
 def beef():
-    """Heavy batch on H100: 3× 500-upd 1-double + 3× hybrid simul+prune."""
+    """Heavy batch on H100: 3x 500-upd 1-double + 3x hybrid simul+prune."""
     with modal.enable_output():
         handles = []
         for seed in (10, 11, 12):

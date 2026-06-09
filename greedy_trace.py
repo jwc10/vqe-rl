@@ -56,7 +56,7 @@ def greedy_prune_with_trace(cfg, start_records, fci, chem_acc=1.6e-3,
             info = env._done_info()
         trace[-1]["cnots_after"] = info.get("cnots")
         if verbose:
-            print(f"  trace round {round_no}: remove idx {best_idx} -> "
+            print(f"  trace round {round_no}: remove idx {best_idx}, now "
                   f"{info['cnots']} CNOTs, err={info['error_vs_fci']*1e3:.4f} mHa",
                   flush=True)
         if done:

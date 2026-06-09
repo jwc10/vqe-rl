@@ -67,9 +67,9 @@ def main(active_electrons=None, active_orbitals=None):
     print(f"  single VQE call took {dt:.1f}s ({len(result['history']['energy'])} evals)\n")
 
     if dt > 30:
-        print(">>> VQE is slow (>30s). For RL, use an active space, e.g.:")
-        print(">>>   python -c \"import lih_vqe; lih_vqe.main(active_electrons=2, active_orbitals=5)\"")
-        print(">>> train_lih.py defaults to that frozen-core space.\n")
+        print("VQE is slow (>30s). For RL, use an active space, e.g.:")
+        print("  python -c \"import lih_vqe; lih_vqe.main(active_electrons=2, active_orbitals=5)\"")
+        print("  train_lih.py defaults to that frozen-core space.\n")
 
     out_dir = Path("results")
     out_dir.mkdir(exist_ok=True)

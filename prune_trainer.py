@@ -81,7 +81,7 @@ def train_prune_campaign(
     log_every=1,
     out_dir=None,
 ):
-    # greedy trace -> behavioral clone -> PPO explores non-greedy removal orders
+    # greedy trace seeds behavioral cloning, then PPO explores non-greedy removal orders
     torch.manual_seed(seed)
     rng = np.random.default_rng(seed)
     dev = pick_device()
@@ -104,7 +104,7 @@ def train_prune_campaign(
         )
         bc_loss = bc_pretrain(net, tr["trace"], dev, epochs=bc_epochs)
         print(f"[{label}] BC done: {len(tr['trace'])} steps, loss={bc_loss:.4f}, "
-              f"greedy trace -> {tr['final'].get('cnots')} CNOTs", flush=True)
+              f"greedy trace reached {tr['final'].get('cnots')} CNOTs", flush=True)
 
     if greedy_baseline is None:
         gp = greedy_raw_prune(

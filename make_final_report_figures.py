@@ -40,7 +40,7 @@ def fig_h2_cnots(data):
     fig, ax = plt.subplots(figsize=(9, 4.5))
     bars = ax.barh(methods, cnots, color=colors, edgecolor="white", height=0.65)
     ax.set_xlabel("Compiled CNOT count")
-    ax.set_title("H₂ (4 qubits): compiled CNOTs by method (exact FCI)")
+    ax.set_title("H2 (4 qubits): compiled CNOTs by method (exact FCI)")
     ax.axvline(3, color="#2ecc71", ls="--", alpha=0.5, lw=1)
     for b, c in zip(bars, cnots):
         ax.text(c + 0.15, b.get_y() + b.get_height() / 2, str(c), va="center", fontsize=10)
@@ -256,7 +256,7 @@ def fig_modal_campaign_summary(data):
             f"s{run.get('seed', '?')}",
             str(run.get("cnots", "?")),
             f"{run.get('err_mHa', 0):.2f}" if run.get("err_mHa") else "?",
-            "✓" if run.get("beats_greedy") else ("tie" if run.get("cnots") == run.get("greedy_baseline_cnots") else "-"),
+            "yes" if run.get("beats_greedy") else ("tie" if run.get("cnots") == run.get("greedy_baseline_cnots") else "-"),
             run.get("status", "complete")[:12],
         ])
     if not rows:

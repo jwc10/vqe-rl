@@ -66,7 +66,7 @@ def run_baselines(cfg, *, run_adapt_greedy=True, run_exact_greedy=False):
             "cnots": g1["cnots"], "err_mHa": g1["error_vs_fci"] * 1e3,
             "n_gates": g1["n_gates"], "source": "computed",
         }
-        print(f"  greedy 1-double -> {g1['cnots']} CNOTs", flush=True)
+        print(f"  greedy 1-double: {g1['cnots']} CNOTs", flush=True)
 
     adapt = adapt_vqe(cfg, verbose=False)
     ar = adapt_to_raw_records(adapt["actions"], adapt["params"])
@@ -140,7 +140,7 @@ def run_prune_pair(cfg, start_records, pair_id, baselines, preset, seed=0):
 
     suffix = "chem" if meta["target"] == CHEM else "exact"
     print(f"\n=== matched pair: {meta['label']} | greedy {gb['cnots']} CNOTs "
-          f"-> RL prune ({preset.name}, {n_upd} upd) ===", flush=True)
+          f"vs RL prune ({preset.name}, {n_upd} upd) ===", flush=True)
 
     res, _, _ = train_prune_campaign(
         cfg, start_records,

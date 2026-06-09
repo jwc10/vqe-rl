@@ -104,7 +104,7 @@ def greedy_raw_prune(H, nq, hf, records, fci, chem_acc=CHEM_ACC,
             records = best
             changed = True
             if verbose:
-                print(f"    round {round_no}: removed 1 gate -> {len(records)} gates, "
+                print(f"    round {round_no}: removed 1 gate, now {len(records)} gates, "
                       f"{count_cnots(records)} CNOTs, err={err * 1e3:.4f} mHa "
                       f"({n_evals} evals total)", flush=True)
         elif verbose:
