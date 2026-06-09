@@ -1,5 +1,4 @@
-# train_reinforce.py
-# REINFORCE with a return baseline for H2 circuit-structure search, plus a brute-force check.
+# REINFORCE with a return baseline for H2 structure search, plus a brute-force check.
 
 from __future__ import annotations
 

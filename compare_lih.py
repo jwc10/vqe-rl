@@ -1,9 +1,4 @@
-# compare_lih.py
-# Compare structure-search methods on LiH against simulated FCI: ADAPT-greedy, PPO from
-# scratch, PPO warm-started from ADAPT, and random search at a matched VQE budget. Brute
-# force is infeasible (24 operators -> millions of ordered structures). Metrics: energy
-# vs FCI, circuit depth, and #VQE optimizations. Not a quantum-vs-classical claim; FCI
-# already nails LiH, the point is automated ansatz discovery and compact circuits.
+# Compare structure-search methods on LiH vs FCI: ADAPT, PPO, PPO warm-started from ADAPT, random.
 
 import json
 from pathlib import Path

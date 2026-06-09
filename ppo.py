@@ -1,7 +1,5 @@
-# ppo.py
-# PPO with a small MLP actor-critic. Episodes are short and the reward is terminal-only,
-# so the return for every step is just that terminal reward (gamma=1) and the advantage
-# is return - value.
+# PPO actor-critic for structure search. Reward is terminal-only, so the return for every
+# step is that terminal reward (gamma=1) and the advantage is return - value.
 
 from __future__ import annotations
 

@@ -1,8 +1,4 @@
-# adapt.py
-# ADAPT-VQE greedy baseline. Each step screens every pool operator by its energy gradient
-# at theta=0 (chosen operators held at their angles), adds the largest, re-optimizes all
-# angles, and repeats until the gradient drops below grad_tol. Same pool as the RL agent,
-# but a hand-built selection rule instead of a learned policy.
+# ADAPT-VQE: greedily add the pool operator with the largest energy gradient, then re-optimize.
 
 from __future__ import annotations
 

@@ -1,5 +1,4 @@
-# vqe_core.py
-# shared VQE machinery, used by both h2_vqe and lih_vqe
+# Shared VQE machinery used by the H2 and LiH baselines.
 
 from __future__ import annotations
 

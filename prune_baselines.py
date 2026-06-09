@@ -1,10 +1,5 @@
-# prune_baselines.py
-# Option B: start from a full circuit (UCCSD pool or ADAPT's output) and remove gates
-# while staying within chemical accuracy of FCI. The honest baseline for "can RL prune?"
-# is NOT random removal -- it is greedy backward elimination. We provide both so the gap
-# between them is visible (RL only matters if it beats greedy, not random).
-#
-# Metric is compiled CNOT count (the hardware-relevant cost), not raw excitation count.
+# Greedy backward elimination and random pruning baselines (excitation level), scored by
+# compiled CNOT count.
 
 from __future__ import annotations
 

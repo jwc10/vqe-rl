@@ -1,8 +1,5 @@
-# train_lih.py
-# RL circuit-structure search on LiH. Uses the frozen-core active space (2e, 5o -> 10
-# qubits): full LiH is 12 qubits and one UCCSD VQE call takes ~47s, while the active space
-# reaches FCI in ~2s and keeps ~96% of the correlation. Runs PPO and REINFORCE+baseline,
-# saves training curves and the best circuit. RUN_PARETO adds the depth reward-shaping sweep.
+# RL structure search on LiH (active space). Runs PPO and REINFORCE; RUN_PARETO adds the
+# depth-penalty sweep.
 
 import json
 import time

@@ -1,5 +1,4 @@
-# h2_vqe.py
-# H2 VQE baseline: RL picks the excitation structure, VQE optimizes the angles.
+# H2 VQE baseline: pick an excitation structure, optimize the angles.
 
 from pathlib import Path
 

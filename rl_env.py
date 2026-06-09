@@ -1,10 +1,4 @@
-# rl_env.py
-# RL environment for circuit-structure search, molecule-agnostic via a config dict.
-#
-# The action space is STOP + singles + doubles (the UCCSD pool). That's the standard
-# ansatz but not the whole story for real chemistry: generalized/spin-adapted excitations
-# (k-UpCCGSD), adaptive pools that repeat operators (ADAPT-VQE), and gate ordering all
-# matter. build_action_space is kept simple so a richer pool can drop in later.
+# Circuit-structure search environment: add excitations (singles/doubles) until STOP.
 
 from __future__ import annotations
 

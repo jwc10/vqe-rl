@@ -1,14 +1,5 @@
-# compare_raw.py
-# Head-to-head: does RL building a raw-gate circuit FROM SCRATCH reach chemical accuracy
-# with fewer compiled CNOTs than rule-based pipelines that start from ADAPT's known-good
-# excitation circuit and prune?
-#
-#   1. ADAPT (excitations)                      -- chemistry baseline
-#   2. ADAPT + greedy excitation pruning        -- rule-based, remove whole excitations
-#   3. ADAPT compiled to raw gates + greedy raw-gate pruning  -- rule-based, remove raw gates
-#   4. raw-gate RL from scratch                 -- learned policy
-#
-# Metric: compiled CNOT count at chemical accuracy (1.6e-3 Ha).
+# H2: does raw-gate RL from scratch reach chemical accuracy with fewer compiled CNOTs than
+# the ADAPT-based pipelines (excitations, greedy excitation prune, greedy raw-gate prune)?
 
 from __future__ import annotations
 

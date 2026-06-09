@@ -1,6 +1,4 @@
-# lih_vqe.py
-# LiH VQE baseline. Full LiH (STO-3G) is 12 qubits / 92 excitations, so an active space
-# is used to cut the qubit count when the full problem is too slow.
+# LiH VQE baseline. Full LiH (STO-3G) is 12 qubits, so we use an active space.
 
 import time
 from pathlib import Path
